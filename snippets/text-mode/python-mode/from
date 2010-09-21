@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# name: from ... import ...
+# contributor: SjB <steve@nca.uwo.ca>
+# --
+from ${module} import ${class}
