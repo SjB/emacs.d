@@ -1,11 +1,11 @@
 (add-hook 'python-mode-hook (lambda() (linum-mode 1)))
-(add-hook 'cc-mode-hook (lambda() linum-mode 1)))
+(add-hook 'cc-mode-hook (lambda() (linum-mode 1)))
 
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/packages/yasnippet-0.6.1c/snippets")
-(yas/load-directory "~/.emacs.d/yasnippet/snippets")
+(yas/load-directory "~/.emacs.d/extra/yasnippet/")
 
-(let ((default-directory "~/.emacs.d/site-lisp/"))
+(let ((default-directory "~/.emacs.d/extra/site-lisp/"))
       (normal-top-level-add-to-load-path '("."))
       (normal-top-level-add-subdirs-to-load-path))
 
