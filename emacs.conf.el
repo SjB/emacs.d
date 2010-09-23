@@ -32,3 +32,6 @@
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 (add-hook 'vala-mode-hook #'wisent-csharp-default-setup)
+
+(setq ecb-tip-of-the-day nil)
+(ecb-activate)
