@@ -34,4 +34,5 @@
 (add-hook 'vala-mode-hook #'wisent-csharp-default-setup)
 
 (setq ecb-tip-of-the-day nil)
+(setq ecb-fix-window-size nil)
 (ecb-activate)
