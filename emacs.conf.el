@@ -23,6 +23,7 @@
 (defalias 'hlm 'hl-line-mode)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
+(defalias 'dtw 'delete-trailing-whitespace)
 
 (show-paren-mode t)
 (recentf-mode t) ; recently opened files menu
