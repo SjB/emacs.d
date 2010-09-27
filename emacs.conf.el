@@ -2,6 +2,17 @@
 (yas/load-directory "~/.emacs.d/packages/yasnippet-0.6.1c/snippets")
 (yas/load-directory "~/.emacs.d/extra/yasnippet/")
 
+(setq ecb-tip-of-the-day nil)
+(global-semantic-idle-summary-mode -1)
+(setq semantic-load-turn-useful-things-on nil)
+
+(add-hook 'ecb-activate-hook (lambda () (ecb-hide-ecb-windows)))
+
+(if (window-system)
+	(ecb-activate))
+
+(global-set-key (kbd "<f9>") 'ecb-toggle-ecb-windows)
+
 (let ((default-directory "~/.emacs.d/extra/site-lisp"))
       (normal-top-level-add-to-load-path '("."))
       (normal-top-level-add-subdirs-to-load-path))
@@ -11,30 +22,13 @@
 (setq auto-mode-alist
 	  (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
 
-(defun my-csharp-mode-fn ()
-  "function that runs when csharp-mode is initialized for a buffer."
-)
-
-(add-hook  'csharp-mode-hook 'my-csharp-mode-fn t)
-
 ; load vala-mode
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
+
 (add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
 (add-to-list 'auto-mode-alist '("\\.vapi$" . vala-mode))
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
-
-;(add-hook 'vala-mode-hook 'wisent-csharp-default-setup)
-
-(setq ecb-fix-window-size 'width)
-(setq ecb-tip-of-the-day nil)
-
-(add-hook 'ecb-activate-hook (lambda () (ecb-hide-ecb-windows)))
-
-(if (window-system)
-	(ecb-activate))
-
-(global-set-key (kbd "<f9>") 'ecb-toggle-ecb-windows)
 
 (cua-mode t)
 (add-hook 'c-mode-common-hook 
@@ -59,6 +53,3 @@
 
 (global-set-key (kbd "C-'") 'other-window)
 (global-set-key (kbd "C-?") 'goto-line)
-
-
-
