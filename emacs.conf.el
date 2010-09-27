@@ -3,11 +3,12 @@
       (normal-top-level-add-subdirs-to-load-path))
 
 (load "yasnippet.conf")
-(load "ergoemacs.conf")
+;(load "ergoemacs.conf")
 (load "csharp-mode.conf")
 (load "vala-mode.conf")
 (load "ecb-window.conf")
 
+(cua-mode t)
 (add-hook 'c-mode-common-hook 
 		  (lambda () (c-set-style "linux")))
 
