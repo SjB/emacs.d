@@ -2,16 +2,8 @@
 (yas/load-directory "~/.emacs.d/packages/yasnippet-0.6.1c/snippets")
 (yas/load-directory "~/.emacs.d/extra/yasnippet/")
 
-(setq ecb-tip-of-the-day nil)
-(global-semantic-idle-summary-mode -1)
-(setq semantic-load-turn-useful-things-on nil)
-
-(add-hook 'ecb-activate-hook (lambda () (ecb-hide-ecb-windows)))
-
 (if (window-system)
-	(ecb-activate))
-
-(global-set-key (kbd "<f9>") 'ecb-toggle-ecb-windows)
+  	(load "~/.emacs.d/extra/ecb.conf"))
 
 (let ((default-directory "~/.emacs.d/extra/site-lisp"))
       (normal-top-level-add-to-load-path '("."))
