@@ -16,6 +16,7 @@
 (load "alias")
 (load "keybinding")
 (load "extend-selection")
+(load "bc")
 
 (add-hook 'c-mode-common-hook 
 		  (lambda () (c-set-style "linux")))
