@@ -19,7 +19,7 @@
 (load "bc")
 
 (add-hook 'c-mode-common-hook 
-		  (lambda () (c-set-style "linux")))
+		  (lambda () (c-set-style "java")))
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
