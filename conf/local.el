@@ -1,8 +1,31 @@
+;; gui settings
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+
+(load-theme 'monokai t)
+
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+
+(require 'evil)
+(evil-mode t)
+
+(require 'helm-config)
+
+(helm-mode t)
+(helm-adaptative-mode t)
+(helm-autoresize-mode t)
+(helm-push-mark-mode t)
+(setq helm-mode-fuzzy-match t)
+(setq helm-completion-in-region-fuzzy-match t)
+
+(require 'lusty-explorer)
+
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/extra/yasnippet/")
 
-(add-to-list 'load-path "~/.emacs.d/extra/conf")
-(add-to-list 'load-path "~/.emacs.d/extra/site-lisp")
 
 (if (window-system)
   	(load "ecb.conf"))
@@ -10,13 +33,6 @@
 ;; (let ((default-directory "~/.emacs.d/extra/site-lisp"))
 ;;       (normal-top-level-add-to-load-path '("."))
 ;;       (normal-top-level-add-subdirs-to-load-path))
-
-(load "csharp.conf")
-(load "vala.conf")
-(load "alias")
-(load "keybinding")
-(load "extend-selection")
-(load "bc")
 
 (add-hook 'c-mode-common-hook 
 		  (lambda () (c-set-style "java")))
