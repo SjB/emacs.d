@@ -23,11 +23,11 @@
 
 (require 'lusty-explorer)
 
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/extra/yasnippet/")
 (require 'powerline-evil)
 (powerline-evil-vim-color-theme)
 
+(require 'yasnippet)
+(yas-global-mode t)
 
 (require 'projectile)
 

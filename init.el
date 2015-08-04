@@ -32,6 +32,7 @@
 			  'lusty-explorer
 			  'powerline
 			  'powerline-evil
+			  'yasnippet
 			  'projectile
 			  'monokai-theme)
 
