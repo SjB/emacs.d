@@ -29,8 +29,6 @@
 (powerline-evil-vim-color-theme)
 
 
-(if (window-system)
-  	(load "ecb.conf"))
 (require 'projectile)
 
 ;; (let ((default-directory "~/.emacs.d/extra/site-lisp"))
