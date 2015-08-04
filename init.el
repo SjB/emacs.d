@@ -25,6 +25,7 @@
 			  'evil-surround
 			  'ido-vertical-mode
 			  'auto-complete
+			  'auto-complete-c-headers
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
@@ -39,6 +40,8 @@
 			  'web-mode
 			  'iedit
 			  'evil-iedit-state
+			  'flycheck-google-cpplint
+			  'google-c-style
 			  'company
 			  'monokai-theme)
 

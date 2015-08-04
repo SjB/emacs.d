@@ -10,6 +10,8 @@
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
+(semantic-mode t)
+(global-semantic-idle-scheduler-mode t)
 
 (show-paren-mode t)
 (recentf-mode t) ; recently opened files menu
