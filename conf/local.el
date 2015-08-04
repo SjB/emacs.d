@@ -31,6 +31,7 @@
 
 (require 'projectile)
 
+(require 'magit)
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers

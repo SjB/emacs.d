@@ -32,6 +32,7 @@
 			  'powerline-evil
 			  'yasnippet
 			  'projectile
+			  'magit
 			  'monokai-theme)
 
 (load "local")
