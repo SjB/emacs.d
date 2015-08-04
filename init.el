@@ -37,6 +37,8 @@
 			  'projectile
 			  'magit
 			  'web-mode
+			  'iedit
+			  'evil-iedit-state
 			  'monokai-theme)
 
 (mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
