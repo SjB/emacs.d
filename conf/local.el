@@ -31,6 +31,7 @@
 
 (if (window-system)
   	(load "ecb.conf"))
+(require 'projectile)
 
 ;; (let ((default-directory "~/.emacs.d/extra/site-lisp"))
 ;;       (normal-top-level-add-to-load-path '("."))

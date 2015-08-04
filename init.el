@@ -32,6 +32,7 @@
 			  'lusty-explorer
 			  'powerline
 			  'powerline-evil
+			  'projectile
 			  'monokai-theme)
 
 (load "local")
