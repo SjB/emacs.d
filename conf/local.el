@@ -3,6 +3,10 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+(setq inhibit-startup-screen t)
+
+(prefer-coding-system 'utf-8)
+
 (load-theme 'monokai t)
 
 (require 'ido)
