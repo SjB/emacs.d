@@ -41,6 +41,5 @@
 (load "alias")
 (load "keybinding")
 (load "extend-selection")
-(load "bc")
 
 
