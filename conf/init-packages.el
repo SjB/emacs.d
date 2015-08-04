@@ -19,3 +19,6 @@
 (ac-config-default)
 
 (require 'iedit)
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)

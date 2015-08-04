@@ -42,4 +42,4 @@
 ;; Speed up auto-complete on mono drastically. This comes with the
 ;; downside that documentation is impossible to fetch.
 (setq omnisharp-auto-complete-want-documentation nil)
-(setq omnisharp-server-executable-path "/home/sjb/tools/local/omnisharp/OmniSharp.exe")
+(setq omnisharp-server-executable-path (expand-file-name "bin/OmniSharp/OmniSharp.exe" user-emacs-directory))
