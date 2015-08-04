@@ -20,6 +20,8 @@
       make-backup-files nil ; stop creating those backup~ files
       auto-save-default nil ; stop creating those #autosave# files
       dabrev-case-fold-search t
+      linum-format "%3d "
+      display-time-default-load-average t
       )
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
