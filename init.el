@@ -38,10 +38,4 @@
 			  'web-mode
 			  'monokai-theme)
 
-(load "local")
-(load "alias")
-(load "keybinding")
-(load "extend-selection")
-(load "csharp")
-
-
+(mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
