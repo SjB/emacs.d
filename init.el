@@ -23,6 +23,7 @@
 
 (ensure-package-installed 'evil
 			  'evil-surround
+			  'ido-vertical-mode
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
