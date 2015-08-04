@@ -38,7 +38,6 @@
 
 (load "local")
 (load "csharp.conf")
-(load "vala.conf")
 (load "alias")
 (load "keybinding")
 (load "extend-selection")
