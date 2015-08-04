@@ -24,6 +24,7 @@
 (ensure-package-installed 'evil
 			  'evil-surround
 			  'ido-vertical-mode
+			  'auto-complete
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
