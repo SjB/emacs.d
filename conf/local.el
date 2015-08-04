@@ -31,12 +31,6 @@
 
 (require 'projectile)
 
-;; (let ((default-directory "~/.emacs.d/extra/site-lisp"))
-;;       (normal-top-level-add-to-load-path '("."))
-;;       (normal-top-level-add-subdirs-to-load-path))
-
-(add-hook 'c-mode-common-hook 
-		  (lambda () (c-set-style "java")))
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
