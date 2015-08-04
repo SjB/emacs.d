@@ -35,6 +35,7 @@
 			  'yasnippet
 			  'projectile
 			  'magit
+			  'web-mode
 			  'monokai-theme)
 
 (load "local")
