@@ -4,7 +4,6 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (add-to-list 'load-path "~/.emacs.d/conf")
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 (defun ensure-package-installed (&rest packages)
   " Assure every package is installed, ask for installation if it's not. Return a list of installed packages or nil for every skipped package."
