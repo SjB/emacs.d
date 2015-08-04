@@ -66,6 +66,8 @@
 
 (require 'magit)
 
+(require 'web-mode)
+
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
 
