@@ -2,7 +2,7 @@
 (require 'lusty-explorer)
 
 (require 'powerline-evil)
-(powerline-evil-vim-color-theme)
+(powerline-evil-center-color-theme)
 
 (require 'yasnippet)
 (yas-global-mode t)
