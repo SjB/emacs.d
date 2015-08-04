@@ -25,6 +25,8 @@
 
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/extra/yasnippet/")
+(require 'powerline-evil)
+(powerline-evil-vim-color-theme)
 
 
 (if (window-system)

@@ -30,6 +30,8 @@
 			  'csharp-mode
 			  'omnisharp
 			  'lusty-explorer
+			  'powerline
+			  'powerline-evil
 			  'monokai-theme)
 
 (load "local")
