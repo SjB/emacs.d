@@ -22,6 +22,7 @@
 (package-initialize)
 
 (ensure-package-installed 'evil
+			  'evil-surround
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
