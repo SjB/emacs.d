@@ -37,9 +37,9 @@
 			  'monokai-theme)
 
 (load "local")
-(load "csharp.conf")
 (load "alias")
 (load "keybinding")
 (load "extend-selection")
+(load "csharp")
 
 
