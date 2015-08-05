@@ -1,11 +1,11 @@
 
-(defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
+(defun my:c-header-init ()
+  (require 'company-c-headers)
+  (add-to-list 'company-backends 'company-c-headers)
   )
 
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
+(add-hook 'c++-mode-hook 'my:c-header-init)
+(add-hook 'c-mode-hook 'my:c-header-init)
 
 (eval-after-load 'flycheck
   '(progn
@@ -19,6 +19,6 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
-(add-hook 'c-mode-common-hook '(lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
+;;(add-hook 'c-mode-common-hook '(lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
 
 (global-ede-mode 1)

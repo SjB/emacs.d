@@ -26,8 +26,10 @@
 			  'evil-leader
 			  'evil-matchit
 			  'ido-vertical-mode
-			  'auto-complete
-			  'auto-complete-c-headers
+;;			  'auto-complete
+;;			  'auto-complete-c-headers
+			  'company
+			  'company-c-headers
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
@@ -44,7 +46,6 @@
 			  'evil-iedit-state
 			  'flycheck-google-cpplint
 			  'google-c-style
-			  'company
 			  'monokai-theme)
 
 (mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
