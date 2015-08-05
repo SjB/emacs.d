@@ -27,3 +27,5 @@
       )
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(require 'dired-x)
