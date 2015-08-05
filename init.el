@@ -32,6 +32,7 @@
 			  'auto-complete
 			  'company
 			  'company-c-headers
+			  'company-go
 			  'cpputils-cmake
 			  'cmake-mode
 			  'helm
@@ -46,8 +47,11 @@
 			  'projectile
 			  'magit
 			  'web-mode
+			  'go-mode
+			  'golint
 			  'iedit
 			  'evil-iedit-state
+			  'exec-path-from-shell
 			  'flycheck-google-cpplint
 			  'google-c-style
 			  'elisp-slime-nav
