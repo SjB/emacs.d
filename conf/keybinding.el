@@ -101,3 +101,5 @@
 	    (kbd "v") 'ibuffer-toggle-marks)
 	  ))
      ))
+
+(provide 'sjb-keybinding)

@@ -47,3 +47,6 @@
        (kbd ",ra")
        (lambda() (interactive) (omnisharp-unit-test "all")))
      ))
+
+
+(provide 'init-csharp)

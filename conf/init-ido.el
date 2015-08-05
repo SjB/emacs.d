@@ -28,3 +28,5 @@
                              (define-key ido-completion-map "\C-b" 'ido-prev-match)
                              (define-key ido-completion-map " " 'ido-exit-minibuffer)
                              ))
+
+(provide 'init-ido)

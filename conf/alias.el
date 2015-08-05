@@ -5,3 +5,5 @@
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
 (defalias 'dtw 'delete-trailing-whitespace)
+
+(provide 'sjb-alias)

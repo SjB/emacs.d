@@ -8,3 +8,4 @@
 (setq helm-mode-fuzzy-match t)
 (setq helm-completion-in-region-fuzzy-match t)
 
+(provide 'init-helm)

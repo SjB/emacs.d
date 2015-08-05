@@ -48,3 +48,5 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
  )
 
 (global-set-key (kbd "M-*") 'select-text-in-quote)
+
+(provide 'sjb-script)

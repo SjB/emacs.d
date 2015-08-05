@@ -31,3 +31,5 @@
 (global-ede-mode 1)
 
 (require 'cmake-mode)
+
+(provide 'init-c)
