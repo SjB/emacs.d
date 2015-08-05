@@ -1,4 +1,4 @@
-:;; evil settings
+;; evil settings
 (require 'evil)
 (evil-mode t)
 
@@ -20,4 +20,12 @@
 (evil-add-hjkl-bindings occur-mode 'emacs)
 
 (require 'evil-surround)
-(global-evil-surround-mode 1)
+(global-evil-surround-mode t)
+
+(require 'evil-jumper)
+(global-evil-jumper-mode t)
+
+(require 'evil-leader)
+(global-evil-leader-mode t)
+
+(require 'evil-matchit)
