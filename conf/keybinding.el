@@ -47,19 +47,35 @@
 	  ))
 
      ;; Make HJKL keys work in special buffers
-     (eval-after-load 'magit-mode
-       '(progn
-	  (evil-set-initial-state 'magit-log-edit-mode 'emacs)
-	  (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
-	    "K" 'magit-discard-item
-	    "L" 'magit-key-mode-popup-logging)
-	  (evil-add-hjkl-bindings magit-status-mode-map 'emacs
-	    "K" 'magit-discard-item
-	    "l" 'magit-key-mode-popup-logging
-	    "h" 'magit-toggle-diff-refine-hunk)
-	  (evil-add-hjkl-bindings magit-log-mode-map 'emacs)
-	  (evil-add-hjkl-bindings magit-commit-mode-map 'emacs)
-	  ))
+     ;(evil-set-initial-state 'magit-mode 'normal)
+     ;(evil-set-initial-state 'magit-status-mode 'normal)
+     ;(evil-set-initial-state 'magit-diff-mode 'normal)
+     ;(evil-set-initial-state 'magit-log-mode 'normal)
+
+;     (eval-after-load 'magit-mode
+;       '(progn
+;	  (evil-add-hjkl-bindings magit-log-mode-map 'normal)
+;	  (evil-add-hjkl-bindings magit-commit-mode-map 'normal)
+;	  (evil-add-hjkl-bindings magit-branch-manager-mode-map 'normal
+;	    "K" 'magit-discard-item
+;	    "L" 'magit-key-mode-popup-logging)
+;	  (evil-add-hjkl-bindings magit-status-mode-map 'normal
+;	    "K" 'magit-discard-item
+;	    "L" 'magit-key-mode-popup-logging)
+;
+;	  (evil-define-key 'normal magit-status-mode-map
+;	    "j" 'magit-section-forward
+;	    "k" 'magit-section-backward)
+;	  (evil-define-key 'normal magit-mode-map
+;	    "j" 'magit-section-forward
+;	    "k" 'magit-section-backward)
+;	  (evil-define-key 'normal magit-log-mode-map
+;	    "j" 'magit-section-forward
+;	    "k" 'magit-section-backward)
+;	  (evil-define-key 'normal magit-diff-mode-map
+;	    "j" 'magit-section-forward
+;	    "k" 'magit-section-backward)
+;	  ))
 
      (eval-after-load 'occur-mode
        '(progn
