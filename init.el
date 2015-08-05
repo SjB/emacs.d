@@ -33,6 +33,9 @@
 ;;			  'auto-complete-c-headers
 			  'company
 			  'company-c-headers
+			  'company-cmake
+			  'cpputils-cmake
+			  'cmake-mode
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg

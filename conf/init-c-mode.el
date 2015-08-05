@@ -19,6 +19,15 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
-;;(add-hook 'c-mode-common-hook '(lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (if (derived-mode-p 'c-mode 'c++-mode)
+		(cppcm-reload-all)
+	      )
+;;	    (add-to-list 'ac-sources 'ac-source-semantic)))
+	    ))
 
+(require 'ede)
 (global-ede-mode 1)
+
+(require 'cmake-mode)
