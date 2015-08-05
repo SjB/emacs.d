@@ -9,6 +9,7 @@
 (setq yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
 
 (require 'projectile)
+(projectile-global-mode)
 
 (require 'magit)
 
