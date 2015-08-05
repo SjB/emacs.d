@@ -27,6 +27,7 @@
 			  'evil-matchit
 			  'evil-jumper
 			  'ido-vertical-mode
+			  'flx-ido
 ;;			  'auto-complete
 ;;			  'auto-complete-c-headers
 			  'company

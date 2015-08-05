@@ -1,10 +1,13 @@
 ;; ido settings
 
 (require 'ido)
-(ido-mode t)
-
+(require 'flx-ido)
 (require 'ido-vertical-mode)
+
+(ido-mode t)
 (ido-vertical-mode)
+(ido-everywhere t)
+(flx-ido-mode t)
 
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
@@ -25,4 +28,3 @@
                              (define-key ido-completion-map "\C-b" 'ido-prev-match)
                              (define-key ido-completion-map " " 'ido-exit-minibuffer)
                              ))
-
