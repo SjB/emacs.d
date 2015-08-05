@@ -2,6 +2,7 @@
 EMACSDIR=~/.emacs.d
 
 mkdir -p $EMACSDIR/bin
+mkdir -p $EMACSDIR/snippets
 wget https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py -O $EMACSDIR/bin/cpplint.py
 chmod a+x $EMACSDIR/bin/cpplint.py
 
