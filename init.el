@@ -25,6 +25,7 @@
 			  'evil-surround
 			  'evil-leader
 			  'evil-matchit
+			  'evil-jumper
 			  'ido-vertical-mode
 ;;			  'auto-complete
 ;;			  'auto-complete-c-headers
