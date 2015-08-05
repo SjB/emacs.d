@@ -26,6 +26,7 @@
 			  'evil-leader
 			  'evil-matchit
 			  'evil-jumper
+			  'evil-easymotion
 			  'ido-vertical-mode
 			  'flx-ido
 ;;			  'auto-complete
