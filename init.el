@@ -30,10 +30,8 @@
 			  'ido-vertical-mode
 			  'flx-ido
 			  'auto-complete
-;;			  'auto-complete-c-headers
 			  'company
 			  'company-c-headers
-			  'company-cmake
 			  'cpputils-cmake
 			  'cmake-mode
 			  'helm
