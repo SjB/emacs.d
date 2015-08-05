@@ -47,6 +47,7 @@
 			  'evil-iedit-state
 			  'flycheck-google-cpplint
 			  'google-c-style
+			  'elisp-slime-nav
 			  'monokai-theme)
 
 (mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
