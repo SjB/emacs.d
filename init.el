@@ -29,7 +29,7 @@
 			  'evil-easymotion
 			  'ido-vertical-mode
 			  'flx-ido
-;;			  'auto-complete
+			  'auto-complete
 ;;			  'auto-complete-c-headers
 			  'company
 			  'company-c-headers
