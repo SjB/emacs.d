@@ -23,6 +23,8 @@
 
 (ensure-package-installed 'evil
 			  'evil-surround
+			  'evil-leader
+			  'evil-matchit
 			  'ido-vertical-mode
 			  'auto-complete
 			  'auto-complete-c-headers
