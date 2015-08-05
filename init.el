@@ -45,6 +45,7 @@
 			  'powerline-evil
 			  'yasnippet
 			  'projectile
+			  'helm-projectile
 			  'magit
 			  'web-mode
 			  'go-mode
