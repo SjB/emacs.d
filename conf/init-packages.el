@@ -47,6 +47,8 @@
 (setq guide-key/idle-delay 0.7)
 (guide-key-mode t)
 
+(require 'ace-window)
+(setq aw-dispatch-always t)
 
 (require 'engine-mode)
 (engine-mode)
