@@ -3,6 +3,9 @@ EMACSDIR=~/.emacs.d
 
 mkdir -p $EMACSDIR/bin
 mkdir -p $EMACSDIR/snippets
+
+wget https://raw.githubusercontent.com/nsf/gocode/master/emacs/go-autocomplete.el -O $EMACSDIR/conf/go-autocomplete.el
+wget https://raw.githubusercontent.com/golang/tools/master/cmd/oracle/oracle.el -O $EMACSDIR/conf/oracle.el
 wget https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py -O $EMACSDIR/bin/cpplint.py
 chmod a+x $EMACSDIR/bin/cpplint.py
 
