@@ -53,6 +53,7 @@
 			  'exec-path-from-shell
 			  'flycheck-google-cpplint
 			  'google-c-style
+			  'engine-mode
 			  'typescript-mode
 			  'guide-key
 			  'elisp-slime-nav

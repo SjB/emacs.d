@@ -47,4 +47,16 @@
 (setq guide-key/idle-delay 0.7)
 (guide-key-mode t)
 
+
+(require 'engine-mode)
+(engine-mode)
+;(setq engine/browser-function 'eww-browse-url)
+
+(defengine duckduckgoog
+  "http://duckduckgoog.com/?q=%s"
+  :keybinding "d")
+(defengine github
+  "https://github.com/search?ref=simplesearch&q=%s"
+  :keybinding "g")
+
 (provide 'init-packages)
