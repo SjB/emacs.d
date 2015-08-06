@@ -36,6 +36,7 @@
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
+			  'ace-window
 			  'csharp-mode
 			  'omnisharp
 			  'lusty-explorer
