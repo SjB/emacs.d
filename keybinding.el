@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-p") 'projectile-command-map)
 
 (eval-after-load 'init-evil
   '(progn
