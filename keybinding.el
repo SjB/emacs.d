@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-p") 'projectile-command-map)
 
 (evil-leader/set-key "w" 'save-buffer)
