@@ -55,6 +55,7 @@
 			  'exec-path-from-shell
 			  'flycheck-google-cpplint
 			  'google-c-style
+			  'typescript-mode
 			  'elisp-slime-nav
 			  'monokai-theme)
 
