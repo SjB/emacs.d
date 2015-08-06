@@ -56,6 +56,7 @@
 			  'flycheck-google-cpplint
 			  'google-c-style
 			  'typescript-mode
+			  'guide-key
 			  'elisp-slime-nav
 			  'monokai-theme)
 

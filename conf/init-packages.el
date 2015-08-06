@@ -36,4 +36,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+(require 'guide-key)
+(setq guide-key/guide-key-sequence t)
+(setq guide-key/idle-delay 0.1)
+(guide-key-mode t)
+
 (provide 'init-packages)
