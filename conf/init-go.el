@@ -1,8 +1,10 @@
 
 (require 'go-mode-autoloads)
+(require 'company-go)
+
 (add-hook 'go-mode-hook (lambda ()
 			  ; use company for auto-complete
-			  (set (make-local-variable 'company-backend) '(company-go))
+			  (set (make-local-variable 'company-backends) '(company-go))
 			  (company-mode)
 			  ; Use goimports instead of go-fmt
 			  (setq gofmt-command "goimports")
@@ -19,6 +21,7 @@
 (require 'projectile)
 
 (defun go-env-setup (gopath)
+  (exec-path-from-shell-copy-env "PATH")
   (setenv "GOPATH" gopath)
   (setenv "GOBIN" (concat gopath "bin"))
   (message (concat "Project: " (getenv "GOPATH") " OS: " (getenv "GOOS") " ARCH: " (getenv "GOARCH")))

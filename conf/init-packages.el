@@ -31,7 +31,6 @@
 (require 'iedit)
 
 (require 'company)
-(require 'company-go)
 
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-tooltip-limit 20)
