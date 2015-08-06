@@ -2,7 +2,7 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
-
+(visual-line-mode t)
 
 (prefer-coding-system 'utf-8)
 
@@ -19,6 +19,10 @@
 (global-auto-revert-mode t)
 
 (setq inhibit-startup-screen t
+      inhibit-splash-screen t
+      inhibit-startup-echo-area-message t
+      inhibit-startup-message t
+      require-final-newline t
       make-backup-files nil ; stop creating those backup~ files
       auto-save-default nil ; stop creating those #autosave# files
       dabrev-case-fold-search t
