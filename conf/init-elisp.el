@@ -2,7 +2,7 @@
 
 (defun my:elisp-hook ()
   (elisp-slime-nav-mode)
-  (turn-on-eldoc-mode)
+  (eldoc-mode)
   )
 
 (add-hook 'emacs-lisp-mode-hook 'my:elisp-hook)
