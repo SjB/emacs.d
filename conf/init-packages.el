@@ -6,7 +6,8 @@
 
 (require 'yasnippet)
 (yas-global-mode t)
-(setq yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
+(add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
+(add-to-list 'yas-snippet-dirs (expand-file-name "extra/yasnippet-go" user-emacs-directory))
 
 
 (require 'projectile)
