@@ -3,8 +3,6 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
-(add-to-list 'load-path (expand-file-name "conf" user-emacs-directory))
-
 (defun ensure-package-installed (&rest packages)
   " Assure every package is installed, ask for installation if it's not. Return a list of installed packages or nil for every skipped package."
 
@@ -60,4 +58,6 @@
 			  'elisp-slime-nav
 			  'monokai-theme)
 
+(load (expand-file-name "local.el" user-emacs-directory))
 (mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
+(load (expand-file-name "keybinding.el" user-emacs-directory))
