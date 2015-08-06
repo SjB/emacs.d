@@ -1,5 +1,5 @@
 
-(require 'go-mode)
+(require 'go-mode-autoloads)
 (add-hook 'go-mode-hook (lambda ()
 			  ; use company for auto-complete
 			  (set (make-local-variable 'company-backend) '(company-go))

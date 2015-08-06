@@ -36,6 +36,7 @@
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
+			  'helm-go-package
 			  'ace-window
 			  'csharp-mode
 			  'omnisharp

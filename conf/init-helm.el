@@ -8,4 +8,7 @@
 (setq helm-mode-fuzzy-match t)
 (setq helm-completion-in-region-fuzzy-match t)
 
+(eval-after-load 'go-mode
+  '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
+
 (provide 'init-helm)
