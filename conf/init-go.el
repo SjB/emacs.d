@@ -16,4 +16,26 @@
 			  (local-set-key (kbd "M-.") 'godef-jump)
 			  ))
 
+(require 'projectile)
+
+(defun go-env-setup (gopath)
+  (setenv "GOPATH" gopath)
+  (setenv "GOBIN" (concat gopath "bin"))
+  (message (concat "Project: " (getenv "GOPATH") " OS: " (getenv "GOOS") " ARCH: " (getenv "GOARCH")))
+)
+
+(defun go-env-linux64 ()
+  (interactive)
+  (setenv "GOOS" "linux")
+  (setenv "GOARCH" "amd64")
+  (go-env-setup (projectile-project-root))
+)
+
+(defun go-env-win64 ()
+  (interactive)
+  (setenv "GOOS" "windows")
+  (setenv "GOARCH" "amd64")
+  (go-env-setup (projectile-project-root))
+)
+
 (provide 'init-go)
