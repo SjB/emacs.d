@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-?") 'goto-line)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 (eval-after-load 'init-evil
   '(progn
