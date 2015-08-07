@@ -3,3 +3,7 @@ helm-adaptive-history
 ido.last
 url
 \#*\#
+ac-comphist.dat
+ede-projects.el
+projectile*
+recentf
