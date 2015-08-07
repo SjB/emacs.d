@@ -40,6 +40,7 @@
 			  'helm-ls-hg
 			  'helm-go-package
 			  'helm-flycheck
+			  'ctags-update
 			  'ace-window
 			  'csharp-mode
 			  'omnisharp
