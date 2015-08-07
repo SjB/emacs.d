@@ -1,4 +1,3 @@
-
 (require 'go-mode-autoloads)
 (require 'company-go)
 (require 'flycheck)
