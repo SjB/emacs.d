@@ -1,8 +1,11 @@
 ; Load csharp mode
 (require 'csharp-mode)
+(require 'flycheck)
 
 (defun my:csharp-mode-hook ()
   (omnisharp-mode t)
+  (flycheck-mode)
+  (setq flycheck-idle-change-delay 2)
   )
 
 (add-hook 'csharp-mode-hook 'my:csharp-mode-hook)
@@ -47,6 +50,5 @@
        (kbd ",ra")
        (lambda() (interactive) (omnisharp-unit-test "all")))
      ))
-
 
 (provide 'init-csharp)

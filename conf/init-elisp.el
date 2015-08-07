@@ -1,7 +1,9 @@
 (require 'elisp-slime-nav)
+(require 'flycheck)
 
 (defun my:elisp-hook ()
   (elisp-slime-nav-mode)
+  (flycheck-mode)
   (eldoc-mode)
   )
 
