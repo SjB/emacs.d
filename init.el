@@ -1,5 +1,7 @@
+;;; package --- sjb emacs configuration
 (require 'package)
 
+;;; Code:
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
@@ -65,3 +67,6 @@
 (load (expand-file-name "local.el" user-emacs-directory))
 (mapc 'load (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
 (load (expand-file-name "keybinding.el" user-emacs-directory))
+
+(provide 'init)
+;;; init.el ends here
