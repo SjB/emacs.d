@@ -7,11 +7,13 @@
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-p") 'projectile-command-map)
 
+(define-key evil-window-map "a" 'ace-window)
+
 (evil-leader/set-key "w" 'save-buffer)
 (evil-leader/set-key "q" 'kill-buffer-and-window)
 (evil-leader/set-key "v" 'split-window-right)
 (evil-leader/set-key "e" 'pp-eval-last-sexp)
-(evil-leader/set-key "," 'other-window)
+(evil-leader/set-key "," 'ace-window)
 (evil-leader/set-key "b" 'helm-mini)
 (evil-leader/set-key "x" 'helm-M-x)
 
