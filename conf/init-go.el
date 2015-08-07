@@ -16,8 +16,8 @@
 			  (if (not (string-match 'compile-command))
 			      (set (make-local-variable 'compile-command)
 				   "go generate && go build -v && go test -v && go vet"))
-			  ; Godef jump key binding
-			  (local-set-key (kbd "M-.") 'godef-jump)
+			  ; Godef jump key bindi
+			  ; (local-set-key (kbd "M-.") 'godef-jump)
 			  ))
 
 (defun generic-go-env-setting (gopath)
