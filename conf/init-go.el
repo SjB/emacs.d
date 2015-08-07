@@ -20,7 +20,7 @@
 			  ; (local-set-key (kbd "M-.") 'godef-jump)
 			  ))
 
-(defun generic-go-env-setting (gopath)
+(defun generic-go-env-settings (gopath)
   (exec-path-from-shell-copy-env "PATH")
   (setenv "GOPATH" gopath)
   (setenv "GOBIN" (concat gopath "bin"))
