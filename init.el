@@ -44,7 +44,6 @@
 			  'ace-window
 			  'csharp-mode
 			  'omnisharp
-			  'lusty-explorer
 			  'powerline
 			  'powerline-evil
 			  'yasnippet
