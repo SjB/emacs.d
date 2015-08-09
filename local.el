@@ -6,7 +6,6 @@
 
 (prefer-coding-system 'utf-8)
 
-(load-theme 'monokai t)
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
