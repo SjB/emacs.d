@@ -53,6 +53,7 @@
 			  'web-mode
 			  'go-mode
 			  'golint
+			  'go-eldoc
 			  'iedit
 			  'evil-iedit-state
 			  'exec-path-from-shell

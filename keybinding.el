@@ -102,5 +102,13 @@
        (kbd "l") 'ibuffer-visit-buffer
        (kbd "v") 'ibuffer-toggle-marks)
      ))
+;(define-key go-mode-map [(tab)] 'company-complete)
+
+(define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
+
+(add-hook 'go-mode-hook (lambda ()
+			  (define-key evil-normal-state-map "gd" 'godef-jump)
+			  (define-key evil-normal-state-map "gr" 'go-remove-unused-imports)
+			  (define-key evil-normal-state-map "ga" go-import-add)))
 
 (provide 'sjb-keybinding)
