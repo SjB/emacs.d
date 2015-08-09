@@ -108,11 +108,14 @@
   (kbd "l") 'ibuffer-visit-buffer
   (kbd "v") 'ibuffer-toggle-marks)
 
+(define-key c-mode-base-map (kbd "C-c C-g") '(lambda ()(interactive)
+					       (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
+
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
 
 (add-hook 'go-mode-hook (lambda ()
 			  (define-key evil-normal-state-map "gd" 'godef-jump)
 			  (define-key evil-normal-state-map "gr" 'go-remove-unused-imports)
-			  (define-key evil-normal-state-map "ga" go-import-add)))
+			  (define-key evil-normal-state-map "ga" 'go-import-add)))
 
 (provide 'sjb-keybinding)

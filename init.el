@@ -46,6 +46,7 @@
 			  'helm-gtags
 			  'ctags-update
 			  'ggtags
+			  'stickyfunc-enhance
 			  'ace-window
 			  'csharp-mode
 			  'omnisharp

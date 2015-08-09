@@ -13,6 +13,8 @@
   (google-set-c-style)
   (google-make-newline-indent)
   (cppcm-reload-all)
+  (semantic-idle-summary-mode t)
+  (hs-minor-mode t)
   )
 
 (add-hook 'c++-mode-hook 'my:c-header-init)
