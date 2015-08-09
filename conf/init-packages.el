@@ -22,13 +22,11 @@
 
 (require 'iedit)
 
-(require 'company)
-
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-tooltip-limit 20)
 (setq company-idle-delay .3)
 (setq company-echo-delay 0)
-(setq company-begin-comands '(self-insert-command))
+(setq company-begin-commands '(self-insert-command))
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
