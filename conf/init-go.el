@@ -8,7 +8,7 @@
 (add-hook 'go-mode-hook (lambda ()
 			  ; use company for auto-complete
 			  (add-to-list 'company-backends 'company-go)
-			  (setq company-backends (delete 'company-sematic company-backends))
+			  (setq company-backends (delete 'company-semantic company-backends))
 
 			  ; (set (make-local-variable 'company-backends) '(company-go))
 			  (company-mode)
