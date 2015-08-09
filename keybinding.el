@@ -103,8 +103,6 @@
   (kbd "l") 'ibuffer-visit-buffer
   (kbd "v") 'ibuffer-toggle-marks)
 
-;(define-key go-mode-map [(tab)] 'company-complete)
-
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
 
 (add-hook 'go-mode-hook (lambda ()
