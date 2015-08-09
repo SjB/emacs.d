@@ -41,7 +41,10 @@
 			  'helm-go-package
 			  'helm-flycheck
 			  'helm-projectile
+			  'helm-c-yasnippet
+			  'helm-gtags
 			  'ctags-update
+			  'ggtags
 			  'ace-window
 			  'csharp-mode
 			  'omnisharp

@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-p") 'projectile-command-map)
+(global-set-key (kbd "C-c y") 'helm-yas-complete)
 
 (define-key evil-window-map "a" 'ace-window)
 

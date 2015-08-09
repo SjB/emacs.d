@@ -12,6 +12,15 @@ wget https://raw.githubusercontent.com/golang/tools/master/cmd/oracle/oracle.el 
 wget https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py -O $EMACSDIR/bin/cpplint.py
 chmod a+x $EMACSDIR/bin/cpplint.py
 
+wget http://tamacom.com/global/global-6.5.tar.gz -O /tmp/global.tar.gz
+mkdir /tmp/gtags
+tar -x --strip-components=1 -C /tmp/gtags -f /tmp/global.tar.gz
+pushd /tmp/gtags
+./configure --prefix=$EMACSDIR/gtags
+make install
+popd
+rm -rf /tmp/gtags /tmp/global.tar.gz
+
 git clone --recurse-submodules https://github.com/nosami/OmniSharpServer.git /tmp/OmniSharpServer
 pushd /tmp/OmniSharpServer
 xbuild
