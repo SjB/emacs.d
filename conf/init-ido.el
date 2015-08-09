@@ -9,6 +9,13 @@
 (ido-everywhere t)
 (flx-ido-mode t)
 
+;(setq ido-use-faces nil)
+(add-to-list 'ido-ignore-files "\\.DS_Store")
+(add-to-list 'ido-ignore-directories "\\.git")
+(add-to-list 'ido-ignore-directories "\\.bzr")
+(add-to-list 'ido-ignore-directories "\\.hg")
+(add-to-list 'ido-ignore-directories "\\.svn")
+
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-case-fold t ;; ignore case
