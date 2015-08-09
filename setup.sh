@@ -13,6 +13,6 @@ chmod a+x $EMACSDIR/bin/cpplint.py
 git clone --recurse-submodules https://github.com/nosami/OmniSharpServer.git /tmp/OmniSharpServer
 pushd /tmp/OmniSharpServer
 xbuild
-mv  OmniSharp/bin/Debug $EMACSDIR/bin/OmniSharp
+mv  OmniSharp/bin/Debug $EMACSDIR/OmniSharp
 popd
 rm -rf /tmp/OmniSharpServer

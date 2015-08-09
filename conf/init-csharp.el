@@ -12,7 +12,7 @@
 
 ;; Disable documentation if you need to speed up auto-complete on mono drastically
 (setq omnisharp-auto-complete-want-documentation nil)
-(setq omnisharp-server-executable-path (expand-file-name "bin/OmniSharp/OmniSharp.exe" user-emacs-directory))
+(setq omnisharp-server-executable-path (expand-file-name "OmniSharp/OmniSharp.exe" user-emacs-directory))
 
 ;; Example evil-mode config
 (eval-after-load 'evil
