@@ -38,6 +38,7 @@
 			  'helm
 			  'helm-ls-git
 			  'helm-ls-hg
+			  'helm-company
 			  'helm-go-package
 			  'helm-flycheck
 			  'helm-projectile

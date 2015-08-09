@@ -15,6 +15,11 @@
 (eval-after-load 'go-mode
   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
 
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-:") 'helm-company)
+     (define-key company-active-map (kbd "C-:") 'helm-company)))
+
 (custom-set-variables
  '(helm-gtags-path-style 'relative)
  '(helm-gtags-ignore-case t)
