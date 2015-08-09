@@ -1,5 +1,6 @@
 ;; helm settings
 (require 'helm-config)
+(require 'helm-projectile)
 
 (helm-mode t)
 (helm-adaptative-mode t)

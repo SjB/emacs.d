@@ -18,8 +18,6 @@
 (setq projectile-switch-project-action 'helm-projectile)
 ;(setq projectile-keymap-prefix (kbd "M-u"))
 
-(require 'helm-projectile)
-
 (require 'magit)
 
 (require 'web-mode)

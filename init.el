@@ -40,6 +40,7 @@
 			  'helm-ls-hg
 			  'helm-go-package
 			  'helm-flycheck
+			  'helm-projectile
 			  'ctags-update
 			  'ace-window
 			  'csharp-mode
@@ -48,7 +49,6 @@
 			  'powerline-evil
 			  'yasnippet
 			  'projectile
-			  'helm-projectile
 			  'magit
 			  'web-mode
 			  'go-mode
