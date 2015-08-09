@@ -34,34 +34,31 @@
      (evil-leader/set-key "h" 'dired-jump)
      ))
 
-(eval-after-load 'dired
-  '(progn
-     (defun my:dired-up-directory ()
-       "Take dired up one directory, but behave like dired-find-alternate-file"
-       (interactive)
-       (let ((old (current-buffer)))
-	 (dired-up-directory)
-	 (kill-buffer old)
-	 ))
+(defun my:dired-up-directory ()
+  "Take dired up one directory, but behave like dired-find-alternate-file"
+  (interactive)
+  (let ((old (current-buffer)))
+    (dired-up-directory)
+    (kill-buffer old)
+    ))
 
-     (evil-define-key 'normal dired-mode-map "h" 'my:dired-up-directory)
-     (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
-     (evil-define-key 'normal dired-mode-map "o" 'dired-sort-toggle-or-edit)
-     (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
-     (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
-     (evil-define-key 'normal dired-mode-map "u" 'dired-unmark)
-     (evil-define-key 'normal dired-mode-map "U" 'dired-unmark-all-marks)
-     (evil-define-key 'normal dired-mode-map "c" 'dired-create-directory)
-     (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
-     (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
-     (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
-     ))
+(evil-define-key 'normal dired-mode-map "h" 'my:dired-up-directory)
+(evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
+(evil-define-key 'normal dired-mode-map "o" 'dired-sort-toggle-or-edit)
+(evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
+(evil-define-key 'normal dired-mode-map "m" 'dired-mark)
+(evil-define-key 'normal dired-mode-map "u" 'dired-unmark)
+(evil-define-key 'normal dired-mode-map "U" 'dired-unmark-all-marks)
+(evil-define-key 'normal dired-mode-map "c" 'dired-create-directory)
+(evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
+(evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
+(evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
 
-     ;; Make HJKL keys work in special buffers
-     ;(evil-set-initial-state 'magit-mode 'normal)
-     ;(evil-set-initial-state 'magit-status-mode 'normal)
-     ;(evil-set-initial-state 'magit-diff-mode 'normal)
-     ;(evil-set-initial-state 'magit-log-mode 'normal)
+;; Make HJKL keys work in special buffers
+;(evil-set-initial-state 'magit-mode 'normal)
+;(evil-set-initial-state 'magit-status-mode 'normal)
+;(evil-set-initial-state 'magit-diff-mode 'normal)
+;(evil-set-initial-state 'magit-log-mode 'normal)
 
 ;     (eval-after-load 'magit-mode
 ;       '(progn
@@ -88,29 +85,24 @@
 ;	    "k" 'magit-section-backward)
 ;	  ))
 
-(eval-after-load 'occur-mode
-  '(progn
-     (evil-add-hjkl-bindings occur-mode 'emacs)
-     ))
+(evil-add-hjkl-bindings occur-mode 'emacs)
 
 
-(eval-after-load 'ibuffer
-  '(progn
-     (evil-set-initial-state 'ibuffer-mode 'normal)
-     (evil-define-key 'normal ibuffer-mode-map
-       (kbd "m") 'ibuffer-mark-forward
-       (kbd "t") 'ibuffer-toggle-forward
-       (kbd "u") 'ibuffer-unmark-forward
-       (kbd "=") 'ibuffer-diff-with-file
-       (kbd "J") 'ibuffer-jump-to-buffer
-       (kbd "M-g") 'ibuffer-jump-to-buffer
-       (kbd "M-s a C-s") 'ibuffer-do-isearch
-       (kbd "M-s a M-C-s") 'ibuffer-do-isearch-regexp
-       (kbd "j") 'evil-next-line
-       (kbd "k") 'evil-previous-line
-       (kbd "l") 'ibuffer-visit-buffer
-       (kbd "v") 'ibuffer-toggle-marks)
-     ))
+(evil-set-initial-state 'ibuffer-mode 'normal)
+(evil-define-key 'normal ibuffer-mode-map
+  (kbd "m") 'ibuffer-mark-forward
+  (kbd "t") 'ibuffer-toggle-forward
+  (kbd "u") 'ibuffer-unmark-forward
+  (kbd "=") 'ibuffer-diff-with-file
+  (kbd "J") 'ibuffer-jump-to-buffer
+  (kbd "M-g") 'ibuffer-jump-to-buffer
+  (kbd "M-s a C-s") 'ibuffer-do-isearch
+  (kbd "M-s a M-C-s") 'ibuffer-do-isearch-regexp
+  (kbd "j") 'evil-next-line
+  (kbd "k") 'evil-previous-line
+  (kbd "l") 'ibuffer-visit-buffer
+  (kbd "v") 'ibuffer-toggle-marks)
+
 ;(define-key go-mode-map [(tab)] 'company-complete)
 
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
