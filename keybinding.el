@@ -18,6 +18,14 @@
 (evil-leader/set-key "b" 'helm-mini)
 (evil-leader/set-key "x" 'helm-M-x)
 
+(define-key evil-normal-state-map "gf" 'projectile-find-file-dwim)
+(define-key evil-normal-state-map "gF" 'projectile-find-file-dwim-other-window)
+(define-key evil-normal-state-map "gb" 'ido-switch-buffer)
+(define-key evil-normal-state-map "gc" 'recompile)
+(define-key evil-normal-state-map "gt" 'eshell)
+(define-key evil-normal-state-map "gk" 'ido-kill-buffer)
+(define-key evil-normal-state-map [f5] 'recompile)
+
 (evil-set-initial-state 'nav-mode 'emacs)
 (evil-set-initial-state 'grep-mode 'emacs)
 
