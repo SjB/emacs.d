@@ -5,9 +5,9 @@
 (powerline-evil-center-color-theme)
 
 (require 'yasnippet)
-(yas-global-mode t)
 (add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'yas-snippet-dirs (expand-file-name "extra/yasnippet-go" user-emacs-directory))
+(yas-global-mode t)
 
 
 (require 'projectile)
