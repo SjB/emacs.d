@@ -1,5 +1,5 @@
 ;; settings for imported packages
-(require 'lusty-explorer)
+(require 'dired-x)
 
 (require 'powerline-evil)
 (powerline-evil-center-color-theme)
