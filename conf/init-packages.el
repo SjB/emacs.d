@@ -30,6 +30,9 @@
 (setq company-echo-delay 0)
 (setq company-begin-comands '(self-insert-command))
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
