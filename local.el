@@ -4,8 +4,9 @@
 (tool-bar-mode -1)
 (visual-line-mode t)
 
-(prefer-coding-system 'utf-8)
+(exec-path-from-shell-copy-env "PATH")
 
+(prefer-coding-system 'utf-8)
 
 (delete-selection-mode t) ; make typing override text selection
 (global-linum-mode t) ;always show line numbers
@@ -25,12 +26,10 @@
       make-backup-files nil ; stop creating those backup~ files
       auto-save-default nil ; stop creating those #autosave# files
       dabrev-case-fold-search t
-      linum-format "%3d "
+      linum-format "%4d\u2502 "
       display-time-default-load-average t
       )
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(require 'dired-x)
 
 (provide 'init-local)
