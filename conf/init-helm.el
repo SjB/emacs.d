@@ -1,24 +1,29 @@
 ;; helm settings
+(require 'helm)
 (require 'helm-config)
+(require 'helm-mode)
 (require 'helm-c-yasnippet)
 (require 'helm-projectile)
 (require 'helm-gtags)
 
+
+(setq helm-split-window-in-side-p t)
+(setq helm-move-to-line-cycle-in-source t)
+(setq helm-ff-search-library-in-sexp t)
+(setq helm-scroll-amount 8)
+(setq helm-ff-file-name-history-use-recentf t)
+(setq helm-yas-space-match-any-greedy t)
+(setq helm-mode-fuzzy-match t)
+(setq helm-completion-in-region-fuzzy-match t)
+
 (helm-mode t)
-(helm-adaptative-mode t)
+(helm-adaptive-mode t)
 (helm-autoresize-mode t)
 (helm-push-mark-mode t)
-(setq helm-mode-fuzzy-match t)
-(setq helm-yas-space-match-any-greedy t)
-(setq helm-completion-in-region-fuzzy-match t)
+(helm-gtags-mode t)
 
 (eval-after-load 'go-mode
   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
-
-(eval-after-load 'company
-  '(progn
-     (define-key company-mode-map (kbd "C-:") 'helm-company)
-     (define-key company-active-map (kbd "C-:") 'helm-company)))
 
 (custom-set-variables
  '(helm-gtags-path-style 'relative)

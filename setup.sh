@@ -27,3 +27,8 @@ xbuild
 mv  OmniSharp/bin/Debug $EMACSDIR/OmniSharp
 popd
 rm -rf /tmp/OmniSharpServer
+
+
+mkdir -p $EMACSDIR/.gtags
+pushd $EMACSDIR/.gtags
+GTAGSLIBPATH=$EMACSDIR/.gtags $EMACSDIR/gtags/bin/gtags -c

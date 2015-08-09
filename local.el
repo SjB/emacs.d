@@ -32,4 +32,6 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(setenv "GTAGSLIBPATH" (expand-file-name ".gtags" user-emacs-directory))
+
 (provide 'init-local)

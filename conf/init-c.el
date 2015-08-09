@@ -3,7 +3,9 @@
 (require 'google-c-style)
 (require 'company-c-headers)
 (require 'cmake-mode)
-(require 'ggtags)
+(require 'stickyfunc-enhance)
+
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 
 (defun my:c-mode-common-hook ()
   (add-to-list 'company-backends 'company-c-headers)
@@ -11,12 +13,7 @@
   (google-set-c-style)
   (google-make-newline-indent)
   (cppcm-reload-all)
-  (ggtags-mode t)
-  (helm-gtags-mode t)
   )
-
-(custom-set-variables
- '(ggtags-executable-directory (expand-file-name "gtags/bin" user-emacs-directory)))
 
 (add-hook 'c++-mode-hook 'my:c-header-init)
 (add-hook 'c-mode-hook 'my:c-header-init)

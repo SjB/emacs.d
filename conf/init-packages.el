@@ -9,6 +9,13 @@
 (add-to-list 'yas-snippet-dirs (expand-file-name "extra/yasnippet-go" user-emacs-directory))
 (yas-global-mode t)
 
+(require 'ggtags)
+(ggtags-mode t)
+(custom-set-variables
+ '(ggtags-executable-directory (expand-file-name "gtags/bin" user-emacs-directory)))
+
+(setq-local eldoc-documentation-function #'ggtags-eldoc-function)
+
 
 (require 'projectile)
 (projectile-global-mode)

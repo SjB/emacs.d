@@ -29,6 +29,11 @@
 (evil-set-initial-state 'nav-mode 'emacs)
 (evil-set-initial-state 'grep-mode 'emacs)
 
+(evil-make-overriding-map ggtags-mode-map 'normal)
+;; force update evil keymaps after ggtags-mode loaded
+(add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
+(define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
+
 (eval-after-load 'dired-x
   '(progn
      (evil-leader/set-key "h" 'dired-jump)
