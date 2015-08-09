@@ -3,6 +3,10 @@ helm-adaptive-history
 ido.last
 url
 \#*\#
+*.elc
+OmniSharp
+gtags
+semanticdb
 ac-comphist.dat
 ede-projects.el
 projectile*
