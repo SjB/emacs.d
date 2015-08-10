@@ -65,6 +65,7 @@
 			  'exec-path-from-shell
 			  'flycheck-google-cpplint
 			  'google-c-style
+			  'php-mode
 			  'engine-mode
 			  'typescript-mode
 			  'guide-key

@@ -171,4 +171,6 @@
   "https://github.com/search?ref=simplesearch&q=%s"
   :keybinding "g")
 
+(require 'php-mode)
+
 (provide 'init-packages)
