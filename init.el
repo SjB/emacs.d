@@ -1,3 +1,5 @@
+;(byte-recompile-directory (expand-file-name "conf" user-emacs-directory) 0)
+(require 'cl)
 (require 'package)
 
 (defun ensure-package-installed (&rest packages)
@@ -67,6 +69,13 @@
 			  'typescript-mode
 			  'guide-key
 			  'elisp-slime-nav
-			  'monokai-theme)
+			  'monokai-theme
+			  'editorconfig)
 
 (load (expand-file-name "local.el" user-emacs-directory))
+
+(add-to-list 'load-path (expand-file-name "conf" user-emacs-directory))
+(mapc '(lambda (x) (load-library (file-name-sans-extension (file-name-nondirectory x))))
+      (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
+
+(load (expand-file-name "keybinding.el" user-emacs-directory))

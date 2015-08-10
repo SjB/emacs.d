@@ -4,7 +4,7 @@ EMACSDIR=$HOME/.emacs.d
 mkdir -p $EMACSDIR/bin
 mkdir -p $EMACSDIR/snippets
 
-sudo apt-get install build-essential clang exuberant-ctags
+sudo apt-get install build-essential clang exuberant-ctags editorconfig
 
 wget https://raw.githubusercontent.com/dominikh/go-errcheck.el/master/go-errcheck.el -O $EMACSDIR/conf/go-errcheck.el
 #wget https://raw.githubusercontent.com/nsf/gocode/master/emacs/go-autocomplete.el -O $EMACSDIR/conf/go-autocomplete.el

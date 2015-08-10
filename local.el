@@ -1,4 +1,3 @@
-;(byte-recompile-directory (expand-file-name "conf" user-emacs-directory) 0)
 ;; gui settings
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
@@ -34,11 +33,5 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setenv "GTAGSLIBPATH" (expand-file-name ".gtags" user-emacs-directory))
-
-(add-to-list 'load-path (expand-file-name "conf" user-emacs-directory))
-(mapc '(lambda (x) (load-library (file-name-sans-extension (file-name-nondirectory x))))
-      (directory-files (expand-file-name "conf" user-emacs-directory) t "^[0-9A-Za-z-]*\\.el"))
-
-(load (expand-file-name "keybinding.el" user-emacs-directory))
 
 (provide 'init-local)

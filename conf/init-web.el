@@ -19,12 +19,8 @@
 	("php" . (ac-source-yasnippet ac-source-php-auto-yasnippets))
 	))
 
-(defun my:web-mode-hook ()
-  "Hooks for web mode."
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  )
-
-(add-hook 'web-mode-hook 'my:web-mode-hook)
+(add-hook 'web-mode-hook '(lambda ()
+			    (setq web-mode-markup-indent-offset 2)
+			    (setq web-mode-css-indent-offset 2)))
 
 (provide 'init-web)

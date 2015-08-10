@@ -1,3 +1,12 @@
+;; SjB Alias
+(defalias 'list-buffers 'ibuffer)
+(defalias 'rof 'recentf-open-files)
+(defalias 'hlm 'hl-line-mode)
+(defalias 'gf 'grep-find)
+(defalias 'fd 'find-dired)
+(defalias 'dtw 'delete-trailing-whitespace)
+
+
 ;; SjB keybinding file
 
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -5,12 +14,14 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-p") 'projectile-command-map)
 (global-set-key (kbd "C-c y") 'helm-yas-complete)
 
 ; helm keybinding
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
+
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
@@ -27,6 +38,14 @@
 (evil-leader/set-key "," 'ace-window)
 (evil-leader/set-key "b" 'helm-mini)
 (evil-leader/set-key "x" 'helm-M-x)
+
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
 (define-key evil-normal-state-map "gf" 'projectile-find-file-dwim)
 (define-key evil-normal-state-map "gF" 'projectile-find-file-dwim-other-window)
