@@ -118,7 +118,7 @@
 			     (column-number-mode t)
 			     ))
 (require 'yasnippet)
-(add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
+;(add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'yas-snippet-dirs (expand-file-name "extra/yasnippet-go" user-emacs-directory))
 (add-hook 'web-mode-hook '(lambda ()
 			    (yas-activate-extra-mode 'html-mode)
