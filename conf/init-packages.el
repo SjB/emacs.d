@@ -19,6 +19,13 @@
 (require 'evil-easymotion)
 (evilem-default-keybindings "SPC")
 
+(setq evil-emacs-state-cursor '("pink" box))
+(setq evil-normal-state-cursor '("green" box))
+(setq evil-visual-state-cursor '("orange" box))
+(setq evil-insert-state-cursor '("blue" bar))
+(setq evil-replace-state-cursor '("blue" bar))
+(setq evil-operator-state-cursor '("red" hollow))
+
 (require 'powerline-evil)
 (powerline-evil-center-color-theme)
 
