@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# contributor: SjB <steve.beaulac@gmail.com
+# name: <input type="..." name="..." id="..." ... />
+# key: <input
+# group: form
+# --
+<input type="$1" name="$2" id="$3" $0 />

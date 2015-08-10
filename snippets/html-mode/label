@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: <label for="...">...</label>
+# key: <label
+# --
+<label for="$1">$0</label>
