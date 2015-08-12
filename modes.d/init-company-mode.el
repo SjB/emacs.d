@@ -1,8 +1,14 @@
 (ensure-package-installed 'company)
 
 (require 'company)
+(require 'company-yasnippet)
+(require 'company-elisp)
+
+(add-to-list 'company-backends 'company-elisp)
+(add-to-list 'company-backends 'company-yasnippet)
 
 (add-hook 'after-init-hook 'global-company-mode)
+
 (setq company-tooltip-limit 20)
 (setq company-idle-delay .3)
 (setq company-echo-delay 0)
