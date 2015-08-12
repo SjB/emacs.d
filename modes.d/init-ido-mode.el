@@ -1,5 +1,6 @@
 (ensure-package-installed
  'ido-vertical-mode
+ 'ido-ubiquitous
  'flx-ido)
 
 ;; ido settings
@@ -7,9 +8,21 @@
 (require 'flx-ido)
 (require 'ido-vertical-mode)
 
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-case-fold t ;; ignore case
+      ido-auto-merge-work-directories-length -1 ;; disable auto-merge (it's confusing)
+      ido-create-new-buffer 'always ;; create new files easily
+      ido-everywhere t
+      ido-use-faces t ;; I like visual matching (colors)
+      )
+
+
 (ido-mode t)
-(ido-vertical-mode)
+(ido-vertical-mode t)
 (ido-everywhere t)
+(ido-ubiquitous-mode t)
+(setq gc-cons-threshold 30000000)
 (flx-ido-mode t)
 
 ;(setq ido-use-faces nil)
@@ -18,16 +31,6 @@
 (add-to-list 'ido-ignore-directories "\\.bzr")
 (add-to-list 'ido-ignore-directories "\\.hg")
 (add-to-list 'ido-ignore-directories "\\.svn")
-
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-case-fold t ;; ignore case
-      ido-auto-merge-work-directories-length -1 ;; disable auto-merge (it's confusing)
-      ido-create-new-buffer 'always ;; create new files easily
-      ido-use-filename-at-point nil ;; don't try to be smart about what I want
-      ido-everywhere t
-      ido-use-faces t ;; I like visual matching (colors)
-      )
 
 ;; Ido buffer intuitive navigation
 ;(add-hook 'ido-setup-hook '(lambda ()
