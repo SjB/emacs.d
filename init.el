@@ -43,7 +43,6 @@
  'omnisharp
  'powerline
  'powerline-evil
- 'yasnippet
  'projectile
  'magit
  'web-mode
