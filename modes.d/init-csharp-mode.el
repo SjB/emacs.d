@@ -1,4 +1,8 @@
-; Load csharp mode
+(ensure-package-installed
+ 'auto-complete
+ 'csharp-mode
+ 'omnisharp)
+					; Load csharp mode
 (require 'csharp-mode)
 (require 'flycheck)
 
@@ -51,4 +55,4 @@
        (lambda() (interactive) (omnisharp-unit-test "all")))
      ))
 
-(provide 'init-csharp)
+(provide 'init-csharp-mode)

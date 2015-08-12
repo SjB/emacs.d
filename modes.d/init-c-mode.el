@@ -1,12 +1,16 @@
-(require 'cc-mode)
-(require 'flycheck)
-(require 'flycheck-google-cpplint)
-(require 'google-c-style)
-(require 'company-c-headers)
-(require 'semantic)
-(require 'stickyfunc-enhance)
+(ensure-package-installed
+ 'google-c-style
+ 'company-c-headers
+ 'cpputils-cmake
+ 'flycheck-google-cpplint)
 
-(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(require 'cc-mode)
+(require 'company-c-headers)
+(require 'google-c-style)
+
+(require 'init-cmake-mode)
+(require 'init-flycheck-mode)
+
 
 (add-hook 'c-mode-common-hook '(lambda ()
 				 (add-to-list 'company-backends 'company-c-headers)
@@ -15,13 +19,18 @@
 				 (google-set-c-style)
 				 (google-make-newline-indent)
 				 (cppcm-reload-all)
-				 (semantic-mode 1)
-				 (semantic-stickyfunc-mode 1)
-				 (semantic-idle-summary-mode 1)
+				 (semantic-mode t)
+				 (flycheck t)
+				 (semantic-stickyfunc-mode t)
+				 (semantic-idle-summary-mode t)
 				 (hs-minor-mode)))
 
-(custom-set-variables
- '(flycheck-c/c++-cppcheck-executable (expand-file-name "bin/cpplint.py" user-emacs-directory))
- '(flycheck-googlelint-verbose "3"))
+(eval-after-load 'init-flycheck-mode
+  '(progn
+     (require 'flycheck-google-cpplint)
+     (custom-set-variables
+      '(flycheck-c/c++-cppcheck-executable (expand-file-name "bin/cpplint.py" user-emacs-directory))
+      '(flycheck-googlelint-verbose "3"))))
 
-(provide 'init-c)
+
+(provide 'init-c-mode)

@@ -1,9 +1,19 @@
+(ensure-package-installed
+ 'go-mode
+ 'golint
+ 'go-eldoc
+ 'go-errcheck
+ 'company-go)
+
+(require 'go-mode)
 (require 'go-mode-autoloads)
-(require 'company-go)
 (require 'compile)
 (require 'go-eldoc)
-(require 'flycheck)
-(require 'projectile)
+(require 'go-oracle)
+(require 'go-errcheck)
+
+(require 'init-flycheck-mode)
+(require 'init-company-mode)
 
 (add-hook 'go-mode-hook (lambda ()
 			  ; use company for auto-complete
@@ -11,13 +21,15 @@
 			  (setq company-backends (delete 'company-semantic company-backends))
 
 			  ; (set (make-local-variable 'company-backends) '(company-go))
-			  (company-mode)
-			  (flycheck-mode)
 			  (go-eldoc-setup)
 			  ; Use goimports instead of go-fmt
 			  (setq gofmt-command "goimports")
+
 			  ; Call Gofmt before saving
 			  (add-hook 'before-save-hook 'gofmt-before-save)
+
+			  (company-mode)
+			  (flycheck-mode)
 			  ))
 
 (defun generic-go-env-settings (gopath &optional goroot)
@@ -61,4 +73,4 @@
   (generic-go-env-settings (projectile-project-root) "~/tools/local/go")
 )
 
-(provide 'init-go)
+(provide 'init-go-mode)

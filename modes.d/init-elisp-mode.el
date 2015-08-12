@@ -1,5 +1,7 @@
+(ensure-package-installed 'elisp-slime-nav)
+
 (require 'elisp-slime-nav)
-(require 'flycheck)
+(require 'init-flycheck-mode)
 
 (defun my:elisp-hook ()
   (elisp-slime-nav-mode)
@@ -14,4 +16,4 @@
      (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
        'elisp-slime-nav-describe-elisp-thing-at-point)))
 
-(provide 'init-elisp)
+(provide 'init-elisp-mode)

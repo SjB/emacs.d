@@ -4,7 +4,6 @@
 (tool-bar-mode -1)
 (visual-line-mode t)
 
-(exec-path-from-shell-copy-env "PATH")
 
 (prefer-coding-system 'utf-8)
 
@@ -34,4 +33,4 @@
 
 (setenv "GTAGSLIBPATH" (expand-file-name ".gtags" user-emacs-directory))
 
-(provide 'init-local)
+(provide 'sjb-custom)
