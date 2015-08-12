@@ -21,8 +21,8 @@
  'editorconfig)
 
 (require 'exec-path-from-shell)
-(exec-path-from-shell-copy-env "PATH")
-
+(exec-path-from-shell-initialize)
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
 
 (load-directory (expand-file-name "modes.d" user-emacs-directory))
 (load-directory (expand-file-name "script.d" user-emacs-directory))
