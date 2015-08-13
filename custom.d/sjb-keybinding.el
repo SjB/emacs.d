@@ -40,6 +40,7 @@
   "q" 'kill-buffer-and-window
   "x" 'helm-M-x
   "p" 'projectile-command-map
+  "h" 'dired-jump
   "b" 'helm-mini
   "e" 'sjb-local-file-map;
   )
@@ -73,11 +74,6 @@
 ;; force update evil keymaps after ggtags-mode loaded
 (add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
 (define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
-
-(eval-after-load 'dired-x
-  '(progn
-     (evil-leader/set-key "h" 'dired-jump)
-     ))
 
 (defun my:dired-up-directory ()
   "Take dired up one directory, but behave like dired-find-alternate-file"
@@ -131,7 +127,6 @@
 ;	  ))
 
 (evil-add-hjkl-bindings occur-mode 'emacs)
-
 
 (evil-set-initial-state 'ibuffer-mode 'normal)
 (evil-define-key 'normal ibuffer-mode-map
