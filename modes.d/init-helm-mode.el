@@ -13,6 +13,7 @@
 (require 'helm-c-yasnippet)
 (require 'helm-projectile)
 (require 'helm-gtags)
+(require 'helm-company)
 
 ;; helm settings
 (setq helm-split-window-in-side-p t)
