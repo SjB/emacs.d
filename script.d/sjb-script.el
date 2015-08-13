@@ -61,4 +61,11 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
 
 (nighttime)
 
+(defun minibuffer-keyboard-quit ()
+  (interactive)
+  (if (and delete-selection-mode transient-mark-mode mark-active)
+      (setq deactivate-mark t)
+    (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+    (abort-recursive-edit)))
+
 (provide 'sjb-script)

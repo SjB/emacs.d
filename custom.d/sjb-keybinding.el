@@ -47,6 +47,7 @@
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+(define-key company-mode-map [escape] 'company-abort)
 
 (define-key evil-normal-state-map "gf" 'projectile-find-file-dwim)
 (define-key evil-normal-state-map "gF" 'projectile-find-file-dwim-other-window)
