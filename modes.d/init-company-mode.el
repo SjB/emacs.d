@@ -5,7 +5,7 @@
 (require 'company-elisp)
 
 (add-to-list 'company-backends 'company-elisp)
-(add-to-list 'company-backends 'company-yasnippet)
+;(add-to-list 'company-backends 'company-yasnippet)
 
 (setq
  company-tooltip-limit 20
