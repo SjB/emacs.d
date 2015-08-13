@@ -2,21 +2,25 @@
  'auto-complete
  'csharp-mode
  'omnisharp)
-					; Load csharp mode
+
+
 (require 'csharp-mode)
-(require 'flycheck)
-
-(defun my:csharp-mode-hook ()
-  (omnisharp-mode t)
-  (flycheck-mode)
-  (setq flycheck-idle-change-delay 2)
-  )
-
-(add-hook 'csharp-mode-hook 'my:csharp-mode-hook)
+(require 'omnisharp)
+(require 'init-flycheck-mode)
+(require 'init-helm-mode)
 
 ;; Disable documentation if you need to speed up auto-complete on mono drastically
-(setq omnisharp-auto-complete-want-documentation nil)
-(setq omnisharp-server-executable-path (expand-file-name "OmniSharp/OmniSharp.exe" user-emacs-directory))
+(setq
+ omnisharp-auto-complete-want-documentation nil
+ omnisharp-company-do-template-completion t
+ omnisharp-server-executable-path (expand-file-name "OmniSharp/OmniSharp.exe" user-emacs-directory))
+
+(add-hook 'csharp-mode-hook '(lambda ()
+			       (message "SjB csharp-mode-hook")
+			       (add-to-list 'company-backends 'company-omnisharp)
+			       (setq company-backends (delete 'company-sematic company-backends))
+			       (omnisharp-mode t)) t)
+
 
 ;; Example evil-mode config
 (eval-after-load 'evil

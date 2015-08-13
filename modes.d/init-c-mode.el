@@ -13,18 +13,23 @@
 (require 'init-ggtags-mode)
 
 (add-hook 'c-mode-common-hook '(lambda ()
-				 (add-to-list 'company-backends 'company-c-headers)
-				 (setq company-backends (delete 'company-sematic company-backends))
-				 ;(setq c-syntactic-indentation nil)
-				 (google-set-c-style)
-				 (google-make-newline-indent)
-				 (cppcm-reload-all)
-				 (semantic-mode t)
-				 (flycheck t)
-				 (semantic-stickyfunc-mode t)
-				 (semantic-idle-summary-mode t)
 				 (ggtags-mode t)
+				 (flycheck-mode t)
 				 (hs-minor-mode)))
+
+(defun init-c-mode-hook ()
+  (add-to-list 'company-backends 'company-c-headers)
+  (setq company-backends (delete 'company-sematic company-backends))
+  ;(setq c-syntactic-indentation nil)
+  (google-set-c-style)
+  (google-make-newline-indent)
+  (cppcm-reload-all)
+  (semantic-mode t)
+  (semantic-stickyfunc-mode t)
+  (semantic-idle-summary-mode t))
+
+(add-hook 'c-mode-hook 'init-c-mode-hook)
+(add-hook 'c++-mode-hook 'init-c-mode-hook)
 
 (eval-after-load 'init-flycheck-mode
   '(progn
