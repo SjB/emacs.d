@@ -17,6 +17,8 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-p") 'projectile-command-map)
 (global-set-key (kbd "C-c y") 'helm-yas-complete)
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+
 
 ; helm keybinding
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
