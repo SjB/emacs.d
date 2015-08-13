@@ -19,6 +19,9 @@
 (global-set-key (kbd "C-c y") 'helm-yas-complete)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
+; expand region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 
 ; helm keybinding
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
