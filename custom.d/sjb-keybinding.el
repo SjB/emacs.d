@@ -38,6 +38,7 @@
 (evil-leader/set-key "," 'ace-window)
 (evil-leader/set-key "b" 'helm-mini)
 (evil-leader/set-key "x" 'helm-M-x)
+(evil-leader/set-key "p" 'projectile-command-map)
 
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
