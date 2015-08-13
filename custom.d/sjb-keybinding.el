@@ -21,8 +21,8 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ; start helm from company-mode
-(define-key company-mode-map (kbd "C-;") 'helm-company)
-(define-key company-active-map (kbd "C-;") 'helm-company)
+(define-key company-mode-map (kbd "C-`") 'helm-company)
+(define-key company-active-map (kbd "C-`") 'helm-company)
 
 ; helm keybinding
 (global-set-key (kbd "C-c y") 'helm-yas-complete)
