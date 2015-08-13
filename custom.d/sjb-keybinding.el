@@ -33,14 +33,22 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
+(define-prefix-command 'sjb-local-file-map)
+
+(evil-leader/set-key
+  "w" 'save-buffer
+  "q" 'kill-buffer-and-window
+  "x" 'helm-M-x
+  "p" 'projectile-command-map
+  "b" 'helm-mini
+  "e" 'sjb-local-file-map;
+  )
+
+(define-key sjb-local-file-map "e" '(lambda () (interactive) (open-note "emacs-cheatsheet")))
+(define-key sjb-local-file-map "n" '(lambda () (interactive) (open-note "nca-journals")))
+(define-key sjb-local-file-map "s" '(lambda () (interactive) (open-note "sagacity-journal")))
+
 (define-key evil-window-map "a" 'ace-window)
-
-(evil-leader/set-key "w" 'save-buffer)
-(evil-leader/set-key "q" 'kill-buffer-and-window)
-(evil-leader/set-key "e" 'pp-eval-last-sexp)
-(evil-leader/set-key "x" 'helm-M-x)
-(evil-leader/set-key "p" 'projectile-command-map)
-
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)

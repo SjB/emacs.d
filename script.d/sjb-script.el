@@ -68,4 +68,9 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
     (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
     (abort-recursive-edit)))
 
+(defun open-note (&optional name)
+  (interactive "sEnter Note's name: ")
+  (find-file (expand-file-name (concat name ".md") "~/Dropbox/Notes/")))
+
+
 (provide 'sjb-script)
