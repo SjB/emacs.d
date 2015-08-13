@@ -10,7 +10,7 @@
 
 (require 'init-cmake-mode)
 (require 'init-flycheck-mode)
-
+(require 'init-ggtags-mode)
 
 (add-hook 'c-mode-common-hook '(lambda ()
 				 (add-to-list 'company-backends 'company-c-headers)
@@ -23,6 +23,7 @@
 				 (flycheck t)
 				 (semantic-stickyfunc-mode t)
 				 (semantic-idle-summary-mode t)
+				 (ggtags-mode t)
 				 (hs-minor-mode)))
 
 (eval-after-load 'init-flycheck-mode

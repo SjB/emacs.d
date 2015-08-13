@@ -1,7 +1,9 @@
 (ensure-package-installed 'ggtags)
 
 (require 'ggtags)
-(ggtags-mode t)
+
+(setenv "GTAGSLIBPATH" (expand-file-name ".gtags" user-emacs-directory))
+
 (custom-set-variables
  '(ggtags-executable-directory (expand-file-name "gtags/bin" user-emacs-directory)))
 
