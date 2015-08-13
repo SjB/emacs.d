@@ -7,12 +7,13 @@
 (add-to-list 'company-backends 'company-elisp)
 (add-to-list 'company-backends 'company-yasnippet)
 
-(add-hook 'after-init-hook 'global-company-mode)
-
-(setq company-tooltip-limit 20)
-(setq company-idle-delay .3)
-(setq company-echo-delay 0)
-(setq company-begin-commands '(self-insert-command))
+(setq
+ company-tooltip-limit 20
+ company-idle-delay .3
+ company-echo-delay 0
+ company-require-match nil
+ company-show-numbers t
+ company-begin-commands '(self-insert-command))
 
 (custom-set-faces
  '(company-preview
@@ -29,5 +30,7 @@
  '(company-tooltip-common-selection
    ((((type x)) (:inherit company-tooltip-selection :weight bold))
     (t (:inherit company-tooltip-selection)))))
+
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'init-company-mode)
