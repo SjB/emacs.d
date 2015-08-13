@@ -17,14 +17,6 @@
       ido-use-faces t ;; I like visual matching (colors)
       )
 
-
-(ido-mode t)
-(ido-vertical-mode t)
-(ido-everywhere t)
-(ido-ubiquitous-mode t)
-(setq gc-cons-threshold 30000000)
-(flx-ido-mode t)
-
 ;(setq ido-use-faces nil)
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 (add-to-list 'ido-ignore-directories "\\.git")
@@ -41,5 +33,12 @@
 ;                             (define-key ido-completion-map "\C-b" 'ido-prev-match)
 ;                             (define-key ido-completion-map " " 'ido-exit-minibuffer)
 ;                             ))
+
+(ido-mode t)
+(ido-vertical-mode)
+(ido-everywhere t)
+(ido-ubiquitous-mode t)
+(setq gc-cons-threshold 30000000)
+(flx-ido-mode t)
 
 (provide 'init-ido-mode)
