@@ -1,5 +1,5 @@
 ;; SjB Alias
-(defalias 'list-buffers 'ibuffer)
+(defalias 'b 'helm-mini)
 (defalias 'rof 'recentf-open-files)
 (defalias 'hlm 'hl-line-mode)
 (defalias 'gf 'grep-find)
@@ -8,22 +8,24 @@
 
 
 ;; SjB keybinding file
-
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x o") 'ace-window)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "M-p") 'projectile-command-map)
-(global-set-key (kbd "C-c y") 'helm-yas-complete)
+
+(global-set-key (kbd "C-c a") 'ace-window)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
 ; expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+; start helm from company-mode
+(define-key company-mode-map (kbd "C-;") 'helm-company)
+(define-key company-active-map (kbd "C-;") 'helm-company)
 
 ; helm keybinding
+(global-set-key (kbd "C-c y") 'helm-yas-complete)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
 
@@ -31,17 +33,11 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-(define-key company-mode-map (kbd "C-:") 'helm-company)
-(define-key company-active-map (kbd "C-:") 'helm-company)
-
 (define-key evil-window-map "a" 'ace-window)
 
 (evil-leader/set-key "w" 'save-buffer)
 (evil-leader/set-key "q" 'kill-buffer-and-window)
-(evil-leader/set-key "v" 'split-window-right)
 (evil-leader/set-key "e" 'pp-eval-last-sexp)
-(evil-leader/set-key "," 'ace-window)
-(evil-leader/set-key "b" 'helm-mini)
 (evil-leader/set-key "x" 'helm-M-x)
 (evil-leader/set-key "p" 'projectile-command-map)
 
