@@ -3,13 +3,10 @@
 (require 'elisp-slime-nav)
 (require 'init-flycheck-mode)
 
-(defun my:elisp-hook ()
-  (elisp-slime-nav-mode)
-  (flycheck-mode)
-  (eldoc-mode)
-  )
-
-(add-hook 'emacs-lisp-mode-hook 'my:elisp-hook)
+(add-hook 'emacs-lisp-mode-hook '(lambda ()
+				   (elisp-slime-nav-mode)
+				   (flycheck-mode)
+				   (eldoc-mode)))
 
 (eval-after-load 'evil
   '(progn
