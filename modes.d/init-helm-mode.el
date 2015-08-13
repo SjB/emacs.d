@@ -9,9 +9,7 @@
  'helm-c-yasnippet
  'helm-gtags)
 
-(require 'helm)
 (require 'helm-config)
-(require 'helm-mode)
 (require 'helm-c-yasnippet)
 (require 'helm-projectile)
 (require 'helm-gtags)
