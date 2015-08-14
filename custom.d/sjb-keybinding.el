@@ -56,6 +56,9 @@
 (define-key sjb-local-file-map "n" '(lambda () (interactive) (open-note "nca-journals")))
 (define-key sjb-local-file-map "s" '(lambda () (interactive) (open-note "sagacity-journal")))
 
+(define-key web-mode-map (kbd "C-c r") 'mc/mark-sgml-tag-pair)
+(define-key web-mode-map (kbd "C-c <delete>") 'sgml-delete-tag)
+
 ; remap C-w in magit-mode to evil-window-map
 (eval-after-load 'magit-mode
   '(progn
