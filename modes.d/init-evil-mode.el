@@ -26,7 +26,7 @@
 (setq evil-emacs-state-cursor '("pink" box))
 (setq evil-normal-state-cursor '("green" box))
 (setq evil-visual-state-cursor '("orange" box))
-(setq evil-insert-state-cursor '("blue" bar))
+(setq evil-insert-state-cursor '("white" bar))
 (setq evil-replace-state-cursor '("blue" bar))
 (setq evil-operator-state-cursor '("red" hollow))
 
