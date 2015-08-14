@@ -9,10 +9,16 @@
 
 ;; SjB keybinding file
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-p") 'projectile-command-map)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
 
 (global-set-key (kbd "C-c a") 'ace-window)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
@@ -41,7 +47,6 @@
   "w" 'save-buffer
   "q" 'kill-buffer-and-window
   "x" 'helm-M-x
-  "p" 'projectile-command-map
   "h" 'dired-jump
   "b" 'helm-mini
   "e" 'sjb-local-file-map;
