@@ -4,7 +4,7 @@
 
 (setq
  which-key-popup-type 'side-window
- which-key-side-window-location 'right)
+ which-key-side-window-location 'bottom
 
 (which-key-mode t)
 
