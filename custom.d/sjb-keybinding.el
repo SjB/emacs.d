@@ -49,7 +49,7 @@
   "x" 'helm-M-x
   "h" 'dired-jump
   "b" 'helm-mini
-  "e" 'sjb-local-file-map;
+  "e" 'sjb-local-file-map
   )
 
 (define-key sjb-local-file-map "e" '(lambda () (interactive) (open-note "emacs-cheatsheet")))
