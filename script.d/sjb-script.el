@@ -47,8 +47,6 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
    )
  )
 
-(global-set-key (kbd "M-*") 'select-text-in-quote)
-
 (defun nighttime ()
   (interactive)
   (disable-theme 'whiteboard)

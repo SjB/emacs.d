@@ -17,6 +17,8 @@
 (global-set-key (kbd "C-c a") 'ace-window)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
+(global-set-key (kbd "M-*") 'select-text-in-quote)
+
 ; expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
