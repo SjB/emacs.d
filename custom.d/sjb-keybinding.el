@@ -49,6 +49,13 @@
 (define-key sjb-local-file-map "n" '(lambda () (interactive) (open-note "nca-journals")))
 (define-key sjb-local-file-map "s" '(lambda () (interactive) (open-note "sagacity-journal")))
 
+; remap C-w in magit-mode to evil-window-map
+(eval-after-load 'magit-mode
+  '(progn
+     (define-key magit-mode-map (kbd "C-w") 'evil-window-map)
+     (define-key magit-mode-map (kbd "M-S-w") 'magit-copy-buffer-thing-as-kill)
+     (define-key magit-mode-map (kbd "M-w") 'magit-copy-as-kill)))
+
 (define-key evil-window-map "a" 'ace-window)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
@@ -94,37 +101,6 @@
 (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
 (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
 (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
-
-;; Make HJKL keys work in special buffers
-;(evil-set-initial-state 'magit-mode 'normal)
-;(evil-set-initial-state 'magit-status-mode 'normal)
-;(evil-set-initial-state 'magit-diff-mode 'normal)
-;(evil-set-initial-state 'magit-log-mode 'normal)
-
-;     (eval-after-load 'magit-mode
-;       '(progn
-;	  (evil-add-hjkl-bindings magit-log-mode-map 'normal)
-;	  (evil-add-hjkl-bindings magit-commit-mode-map 'normal)
-;	  (evil-add-hjkl-bindings magit-branch-manager-mode-map 'normal
-;	    "K" 'magit-discard-item
-;	    "L" 'magit-key-mode-popup-logging)
-;	  (evil-add-hjkl-bindings magit-status-mode-map 'normal
-;	    "K" 'magit-discard-item
-;	    "L" 'magit-key-mode-popup-logging)
-;
-;	  (evil-define-key 'normal magit-status-mode-map
-;	    "j" 'magit-section-forward
-;	    "k" 'magit-section-backward)
-;	  (evil-define-key 'normal magit-mode-map
-;	    "j" 'magit-section-forward
-;	    "k" 'magit-section-backward)
-;	  (evil-define-key 'normal magit-log-mode-map
-;	    "j" 'magit-section-forward
-;	    "k" 'magit-section-backward)
-;	  (evil-define-key 'normal magit-diff-mode-map
-;	    "j" 'magit-section-forward
-;	    "k" 'magit-section-backward)
-;	  ))
 
 (evil-add-hjkl-bindings occur-mode 'emacs)
 
