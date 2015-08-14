@@ -59,7 +59,6 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
   (disable-theme 'monokia)
   (load-theme 'whiteboard t))
 
-(nighttime)
 
 (defun minibuffer-keyboard-quit ()
   (interactive)

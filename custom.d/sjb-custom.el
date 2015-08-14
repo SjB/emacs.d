@@ -4,6 +4,7 @@
 (tool-bar-mode -1)
 (visual-line-mode t)
 
+(nighttime)
 
 (prefer-coding-system 'utf-8)
 
