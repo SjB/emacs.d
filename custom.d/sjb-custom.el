@@ -28,7 +28,12 @@
       dabrev-case-fold-search t
       linum-format "%4d\u2502 "
       display-time-default-load-average t
-      )
+      x-select-enable-clipboard t
+      x-select-enable-primary 3
+      save-interprogram-paste-before-kill t
+      mouse-yank-at-point t
+      load-prefer-newer t)
+
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
