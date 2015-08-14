@@ -1,6 +1,7 @@
 (ensure-package-installed 'web-mode)
 
 (require 'web-mode)
+(require 'sgml-mode)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
