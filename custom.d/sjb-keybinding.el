@@ -67,6 +67,8 @@
      (define-key magit-mode-map (kbd "M-S-w") 'magit-copy-buffer-thing-as-kill)
      (define-key magit-mode-map (kbd "M-w") 'magit-copy-as-kill)))
 
+(define-key evil-insert-state-map (kbd "C-w") 'evil-window-map)
+
 (define-key evil-window-map "a" 'ace-window)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
