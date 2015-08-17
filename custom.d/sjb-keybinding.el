@@ -67,7 +67,28 @@
      (define-key magit-mode-map (kbd "M-S-w") 'magit-copy-buffer-thing-as-kill)
      (define-key magit-mode-map (kbd "M-w") 'magit-copy-as-kill)))
 
+; multiple-cursors keybinding
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m a") 'mc/mark-all-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m p") 'mc/mark-previous-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m n") 'mc/mark-next-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m m") 'mc/mark-more-like-this-extended)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m s") 'mc/skip-to-next-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m S") 'mc/skip-to-previous-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m u") 'mc/unmark-next-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m U") 'mc/unmark-previous-like-this)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m e") 'mc/edit-lines)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m 0") 'mc/edit-beginnings-of-lines)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m $") 'mc/edit-ends-of-lines)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m r") 'mc/mark-all-in-region)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m #") 'mc/insert-numbers)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m '") 'mc/sort-regions)
+(evil-define-key 'visual region-bindings-mode-map (kbd ", m \"") 'mc/reverse-regions)
+
+
 (define-key evil-insert-state-map (kbd "C-w") 'evil-window-map)
+
+(global-set-key (kbd "C-c @") 'set-rectangular-region-anchor)
+(global-set-key (kbd "C-c #") 'mc/mark-all-dwim)
 
 (define-key evil-window-map "a" 'ace-window)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
