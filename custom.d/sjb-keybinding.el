@@ -116,6 +116,8 @@
 (add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
 (define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
 
+(evil-add-hjkl-bindings occur-mode 'emacs)
+
 (defun my:dired-up-directory ()
   "Take dired up one directory, but behave like dired-find-alternate-file"
   (interactive)
@@ -136,8 +138,6 @@
 (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
 (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
 
-(evil-add-hjkl-bindings occur-mode 'emacs)
-
 (evil-set-initial-state 'ibuffer-mode 'normal)
 (evil-define-key 'normal ibuffer-mode-map
   (kbd "m") 'ibuffer-mark-forward
@@ -156,11 +156,11 @@
 (define-key c-mode-base-map (kbd "C-c C-g") '(lambda ()(interactive)
 					       (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
 
+;; golang mode keybinding
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
-
-(add-hook 'go-mode-hook (lambda ()
-			  (define-key evil-normal-state-map "gd" 'godef-jump)
-			  (define-key evil-normal-state-map "gr" 'go-remove-unused-imports)
-			  (define-key evil-normal-state-map "ga" 'go-import-add)))
+(evil-define-key 'normal go-mode-map
+  "gd" 'godef-jump
+  "gr" 'go-remove-unused-imports
+  "ga" 'go-import-add)
 
 (provide 'sjb-keybinding)
