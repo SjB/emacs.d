@@ -9,6 +9,7 @@
  'helm-c-yasnippet
  'helm-gtags)
 
+(require 'helm-mode)
 (require 'helm-config)
 (require 'helm-c-yasnippet)
 (require 'helm-projectile)
@@ -16,14 +17,23 @@
 (require 'helm-company)
 
 ;; helm settings
-(setq helm-split-window-in-side-p t)
-(setq helm-move-to-line-cycle-in-source t)
-(setq helm-ff-search-library-in-sexp t)
-(setq helm-scroll-amount 8)
-(setq helm-ff-file-name-history-use-recentf t)
-(setq helm-yas-space-match-any-greedy t)
-(setq helm-mode-fuzzy-match t)
-(setq helm-completion-in-region-fuzzy-match t)
+(setq
+ helm-split-window-in-side-p t
+ helm-move-to-line-cycle-in-source t
+ helm-ff-search-library-in-sexp t
+ helm-scroll-amount 8
+ helm-ff-file-name-history-use-recentf t
+ helm-yas-space-match-any-greedy t
+ helm-mode-fuzzy-match t
+ helm-completion-in-region-fuzzy-match t
+
+ helm-gtags-path-style 'relative
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-suggested-key-mapping t
+ helm-gtags-prefix-key (kbd "C-c g"))
 
 (helm-mode t)
 (helm-adaptive-mode t)
@@ -34,15 +44,16 @@
 (eval-after-load 'go-mode
   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
 
-(custom-set-variables
- '(helm-gtags-path-style 'relative)
- '(helm-gtags-ignore-case t)
- '(helm-gtags-auto-update t))
-
 (add-hook 'prog-mode-hook '(lambda ()
 			     (line-number-mode t)
 			     (column-number-mode t)
 			     ))
+
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
 
 ;; helm-gtags-mode-map
 ;(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
