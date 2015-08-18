@@ -31,4 +31,11 @@
 			    (setq web-mode-markup-indent-offset 2)
 			    (setq web-mode-css-indent-offset 2)))
 
+;(define-key web-mode-map (kbd "M-(") 'web-mode-element-wrap)
+;(define-key web-mode-map (kbd "M-)") 'web-mode-element-unwrap)
+;(define-key web-mode-map (kbd "M-k") 'web-mode-element-kill)
+;(define-key web-mode-map (kbd "C-M-SPC") 'web-mode-mark-and-expand)
+;(define-key web-mode-map (kbd "%") 'web-mode-match-paren)
+;(define-key web-mode-map (kbd "C-:") 'web-mode-comment-or-uncomment)
+
 (provide 'init-web-mode)

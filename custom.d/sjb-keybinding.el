@@ -59,6 +59,7 @@
 
 (define-key web-mode-map (kbd "C-c r") 'mc/mark-sgml-tag-pair)
 (define-key web-mode-map (kbd "C-c <delete>") 'sgml-delete-tag)
+(define-key web-mode-map (kbd "%") 'web-mode-match-paren)
 
 ; remap C-w in magit-mode to evil-window-map
 (eval-after-load 'magit-mode
@@ -68,27 +69,31 @@
      (define-key magit-mode-map (kbd "M-w") 'magit-copy-as-kill)))
 
 ; multiple-cursors keybinding
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m a") 'mc/mark-all-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m p") 'mc/mark-previous-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m n") 'mc/mark-next-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m m") 'mc/mark-more-like-this-extended)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m s") 'mc/skip-to-next-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m S") 'mc/skip-to-previous-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m u") 'mc/unmark-next-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m U") 'mc/unmark-previous-like-this)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m e") 'mc/edit-lines)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m 0") 'mc/edit-beginnings-of-lines)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m $") 'mc/edit-ends-of-lines)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m r") 'mc/mark-all-in-region)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m #") 'mc/insert-numbers)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m '") 'mc/sort-regions)
-(evil-define-key 'visual region-bindings-mode-map (kbd ", m \"") 'mc/reverse-regions)
+(define-prefix-command 'sjb-multi-cursor-map)
+(evil-define-key 'visual region-bindings-mode-map (kbd ",m") 'sjb-multi-cursor-map)
 
-
-(define-key evil-insert-state-map (kbd "C-w") 'evil-window-map)
+(define-key sjb-multi-cursor-map (kbd "a") 'mc/mark-all-like-this)
+(define-key sjb-multi-cursor-map (kbd "p") 'mc/mark-previous-like-this)
+(define-key sjb-multi-cursor-map (kbd "n") 'mc/mark-next-like-this)
+(define-key sjb-multi-cursor-map (kbd "m") 'mc/mark-more-like-this-extended)
+(define-key sjb-multi-cursor-map (kbd "s") 'mc/skip-to-next-like-this)
+(define-key sjb-multi-cursor-map (kbd "S") 'mc/skip-to-previous-like-this)
+(define-key sjb-multi-cursor-map (kbd "u") 'mc/unmark-next-like-this)
+(define-key sjb-multi-cursor-map (kbd "U") 'mc/unmark-previous-like-this)
+(define-key sjb-multi-cursor-map (kbd "e") 'mc/edit-lines)
+(define-key sjb-multi-cursor-map (kbd "0") 'mc/edit-beginnings-of-lines)
+(define-key sjb-multi-cursor-map (kbd "$") 'mc/edit-ends-of-lines)
+(define-key sjb-multi-cursor-map (kbd "r") 'mc/mark-all-in-region)
+(define-key sjb-multi-cursor-map (kbd "#") 'mc/mark-all-dwin)
+(define-key sjb-multi-cursor-map (kbd "@") 'set-rectangular-region-anchor)
+(define-key sjb-multi-cursor-map (kbd "in") 'mc/insert-numbers)
+(define-key sjb-multi-cursor-map (kbd "'") 'mc/sort-regions)
+(define-key sjb-multi-cursor-map (kbd "\"") 'mc/reverse-regions)
 
 (global-set-key (kbd "C-c @") 'set-rectangular-region-anchor)
 (global-set-key (kbd "C-c #") 'mc/mark-all-dwim)
+
+(define-key evil-insert-state-map (kbd "C-w") 'evil-window-map)
 
 (define-key evil-window-map "a" 'ace-window)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
@@ -110,11 +115,6 @@
 
 (evil-set-initial-state 'nav-mode 'emacs)
 (evil-set-initial-state 'grep-mode 'emacs)
-
-(evil-make-overriding-map ggtags-mode-map 'normal)
-;; force update evil keymaps after ggtags-mode loaded
-(add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
-(define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
 
 (evil-add-hjkl-bindings occur-mode 'emacs)
 
@@ -155,6 +155,19 @@
 
 (define-key c-mode-base-map (kbd "C-c C-g") '(lambda ()(interactive)
 					       (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
+
+;; helm gtags
+(define-key evil-normal-state-map (kbd "C-]") 'helm-gtags-dwin)
+(define-key evil-normal-state-map (kbd "C-t") 'helm-gtags-pop-stack)
+;(define-key c-mode-base-map (kbd "C-]") 'helm-gtags-dwim)
+;(define-key c-mode-base-map (kbd "C-t") 'helm-gtags-pop-stack)
+
+;; ggtags binding
+(define-key ggtags-mode-map (kbd "C-c h g") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c h u") 'ggtags-update-tags)
+(evil-make-overriding-map ggtags-mode-map 'normal)
+;; force update evil keymaps after ggtags-mode loaded
+(add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
 
 ;; golang mode keybinding
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
