@@ -14,6 +14,9 @@
 
 (global-auto-revert-mode t)
 
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
 (setq inhibit-startup-screen t
       inhibit-splash-screen t
       inhibit-startup-echo-area-message t
