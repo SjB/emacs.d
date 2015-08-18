@@ -6,6 +6,7 @@
 ;; ido settings
 (require 'ido)
 (require 'flx-ido)
+(require 'ido-ubiquitous)
 (require 'ido-vertical-mode)
 
 (setq ido-enable-prefix nil
