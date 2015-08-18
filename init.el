@@ -1,5 +1,11 @@
 ;(byte-recompile-directory (expand-file-name "modes.d" user-emacs-directory) 0)
 
+;; gui settings
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+
+
 (add-to-list 'load-path (expand-file-name "packages.d" user-emacs-directory))
 
 (require 'cl)
