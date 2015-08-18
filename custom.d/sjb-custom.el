@@ -33,4 +33,7 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(defadvice sgml-delete-tag (after reindent activate)
+  (indent-region (point-min) (point-max)))
+
 (provide 'sjb-custom)
