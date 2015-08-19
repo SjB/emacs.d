@@ -3,12 +3,14 @@
  'react-snippets
  'angular-snippets
  'ember-yasnippets
+ 'go-snippets
  )
 
 (require 'yasnippet)
 (require 'react-snippets)
 (require 'angular-snippets)
 (require 'ember-yasnippets)
+(require 'go-snippets)
 (require 'init-ggtags-mode)
 
 ;(add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))
