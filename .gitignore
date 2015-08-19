@@ -5,9 +5,12 @@ url
 \#*\#
 *.elc
 OmniSharp
+.gtags
 gtags
 semanticdb
 ac-comphist.dat
 ede-projects.el
 projectile*
 recentf
+.mc-lists.el
+session*
