@@ -177,6 +177,44 @@
 ;; force update evil keymaps after ggtags-mode loaded
 (add-hook 'ggtags-mode-hook #'evil-normalize-keymaps)
 
+;; Example evil-mode config
+(evil-define-key 'insert omnisharp-mode-map (kbd "M-.") 'omnisharp-auto-complete)
+(evil-define-key 'normal omnisharp-mode-map
+  (kbd "<f12>") 'omnisharp-go-to-definition
+  (kbd "g u") 'omnisharp-helm-find-usages
+  (kbd "g I") 'omnisharp-find-implementations
+  (kbd "g d") 'omnisharp-go-to-definition
+  (kbd "g o") 'omnisharp-helm-find-symbols
+  (kbd "g r") 'omnisharp-run-code-action-refactoring
+  (kbd "g f") 'omnisharp-fix-code-issue-at-point
+  (kbd "g F") 'omnisharp-fix-usings
+  (kbd "g R") 'omnisharp-rename
+  (kbd ", i") 'omnisharp-current-type-information
+  (kbd ", I") 'omnisharp-current-type-documentation
+  (kbd ".") 'omnisharp-add-dot-and-auto-complete
+  (kbd ", n t") 'omnisharp-navigate-to-current-file-member
+  (kbd ", n s") 'omnisharp-navigate-to-solution-member
+  (kbd ", n f") 'omnisharp-navigate-to-solution-file-then-file-member
+  (kbd ", n F") 'omnisharp-navigate-to-solution-file
+  (kbd ", n r") 'omnisharp-navigate-to-region
+  (kbd "<f12>") 'omnisharp-show-last-auto-complete-result
+  (kbd "<f12>") 'omnisharp-show-last-auto-complete-result
+  (kbd ",.") 'omnisharp-show-overloads-at-point
+  (kbd ",rl") 'recompile)
+
+(evil-define-key 'normal omnisharp-mode-map (kbd ",rt")
+  (lambda() (interactive) (omnisharp-unit-test "single")))
+
+(evil-define-key 'normal omnisharp-mode-map
+  (kbd ",rf")
+  (lambda() (interactive) (omnisharp-unit-test "fixture")))
+
+(evil-define-key 'normal omnisharp-mode-map
+  (kbd ",ra")
+  (lambda() (interactive) (omnisharp-unit-test "all")))
+
+
+
 ;; golang mode keybinding
 (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
 (evil-define-key 'normal go-mode-map
