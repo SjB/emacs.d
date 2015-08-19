@@ -43,6 +43,13 @@
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
 (define-prefix-command 'sjb-local-file-map)
+(define-prefix-command 'sjb-g-map)
+(define-key sjb-g-map "s" 'magit-status)
+(define-key sjb-g-map "b" 'magit-blame-popup)
+(define-key sjb-g-map "l" 'magit-log-popup)
+(define-key sjb-g-map "d" 'magit-diff-popup)
+(define-key sjb-g-map "z" 'magit-stash-popup)
+(define-key sjb-g-map "c" 'magit-commit-popup)
 
 (evil-leader/set-key
   "w" 'save-buffer
@@ -51,6 +58,7 @@
   "h" 'dired-jump
   "b" 'helm-mini
   "e" 'sjb-local-file-map
+  "g" 'sjb-g-map
   )
 
 (define-key sjb-local-file-map "e" '(lambda () (interactive) (open-note "emacs-cheatsheet")))

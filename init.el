@@ -22,7 +22,6 @@
 (ensure-package-installed
  'exec-path-from-shell
  'monokai-theme
- 'magit
  'ctags-update
  'editorconfig)
 
