@@ -166,7 +166,7 @@
 
 ;; helm gtags
 (define-key evil-normal-state-map (kbd "C-]") 'helm-gtags-dwin)
-(define-key evil-normal-state-map (kbd "C-t") 'helm-gtags-pop-stack)
+;(define-key evil-normal-state-map (kbd "C-t") 'helm-gtags-pop-stack)
 ;(define-key c-mode-base-map (kbd "C-]") 'helm-gtags-dwim)
 ;(define-key c-mode-base-map (kbd "C-t") 'helm-gtags-pop-stack)
 
