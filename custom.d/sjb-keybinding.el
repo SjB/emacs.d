@@ -43,6 +43,10 @@
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
 (define-prefix-command 'sjb-local-file-map)
+(define-key sjb-local-file-map "e" '(lambda () (interactive) (open-note "emacs-cheatsheet")))
+(define-key sjb-local-file-map "n" '(lambda () (interactive) (open-note "nca-journals")))
+(define-key sjb-local-file-map "s" '(lambda () (interactive) (open-note "sagacity-journal")))
+
 (define-prefix-command 'sjb-g-map)
 (define-key sjb-g-map "s" 'magit-status)
 (define-key sjb-g-map "b" 'magit-blame-popup)
@@ -60,10 +64,6 @@
   "e" 'sjb-local-file-map
   "g" 'sjb-g-map
   )
-
-(define-key sjb-local-file-map "e" '(lambda () (interactive) (open-note "emacs-cheatsheet")))
-(define-key sjb-local-file-map "n" '(lambda () (interactive) (open-note "nca-journals")))
-(define-key sjb-local-file-map "s" '(lambda () (interactive) (open-note "sagacity-journal")))
 
 (define-key web-mode-map (kbd "C-c r") 'mc/mark-sgml-tag-pair)
 (define-key web-mode-map (kbd "C-c <delete>") 'sgml-delete-tag)
