@@ -1,6 +1,14 @@
-(ensure-package-installed 'yasnippet)
+(ensure-package-installed
+ 'yasnippet
+ 'react-snippets
+ 'angular-snippets
+ 'ember-yasnippets
+ )
 
 (require 'yasnippet)
+(require 'react-snippets)
+(require 'angular-snippets)
+(require 'ember-yasnippets)
 (require 'init-ggtags-mode)
 
 ;(add-to-list 'yas-snippet-dirs (expand-file-name "snippets" user-emacs-directory))

@@ -1,3 +1,9 @@
 [submodule "extra/yasnippet-go"]
 	path = extra/yasnippet-go
 	url = https://github.com/dominikh/yasnippet-go.git
+[submodule "extra/angularjs-mode"]
+	path = extra/angularjs-mode
+	url = https://github.com/omouse/angularjs-mode
+[submodule "extra/gulpjs"]
+	path = extra/gulpjs
+	url = https://github.com/stevenremot/emacs-gulpjs.git
