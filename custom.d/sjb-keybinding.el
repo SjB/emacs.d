@@ -20,8 +20,8 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
-(global-set-key (kbd "C-c a") 'ace-window)
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+(global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-c a") 'ace-jump-mode)
 
 (global-set-key (kbd "M-*") 'select-text-in-quote)
 
