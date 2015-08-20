@@ -69,6 +69,9 @@
 (define-key web-mode-map (kbd "C-c <delete>") 'sgml-delete-tag)
 (define-key web-mode-map (kbd "%") 'web-mode-match-paren)
 
+(define-key gist-list-menu-mode-map (kbd "C-w") 'evil-window-map)
+(define-key gist-list-mode-map (kbd "C-w") 'evil-window-map)
+
 ; remap C-w in magit-mode to evil-window-map
 (eval-after-load 'magit-mode
   '(progn
