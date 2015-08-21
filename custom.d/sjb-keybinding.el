@@ -1,6 +1,8 @@
 ;; SjB Alias
 (defalias 'hlm 'hl-line-mode)
-(defalias 'gf 'grep-find)
+(defalias 'hgrep 'helm-do-grep)
+(defalias 'pgrep 'helm-projectile-grep)
+(defalias 'pack  'helm-projectile-ack)
 (defalias 'dtw 'delete-trailing-whitespace)
 
 
