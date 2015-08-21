@@ -14,7 +14,10 @@ See URL `http://php.net/manual/en/features.commandline.php'."
 			  (message) " in " (file-name) " on line " line line-end))
   :modes (php-mode php+mode web-mode))
 
-(add-hook 'web-mode-hook (lambda ()
-			   (flycheck-select-checker 'php-flycheck-reporter)))
+(eval-after-load 'web-mode
+  '(progn
+     (add-hook 'web-mode-hook (lambda ()
+				(flycheck-select-checker 'php-flycheck-reporter)))
+     ))
 
 (provide 'init-flycheck-mode)
