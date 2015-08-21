@@ -7,6 +7,7 @@
 (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.s?css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.gohtml\\.gotmpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
