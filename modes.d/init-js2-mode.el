@@ -6,9 +6,9 @@
 (require 'js2-mode)
 (require 'js2-refactor)
 
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . js-mode))
 
-(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+;(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 (setq js2-highlight-level 3)
 
@@ -21,6 +21,6 @@
 			      (js2-refactor-mode t)
 			      )))
 
-(js2r-add-keybindings-with-prefix "C-c C-j")
+;(js2r-add-keybindings-with-prefix "C-c C-j")
 
 (provide 'init-js2-mode)
