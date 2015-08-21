@@ -1,9 +1,6 @@
 ;; SjB Alias
-(defalias 'b 'helm-mini)
-(defalias 'rof 'recentf-open-files)
 (defalias 'hlm 'hl-line-mode)
 (defalias 'gf 'grep-find)
-(defalias 'fd 'find-dired)
 (defalias 'dtw 'delete-trailing-whitespace)
 
 
