@@ -4,7 +4,7 @@ EMACSDIR=$HOME/.emacs.d
 mkdir -p $EMACSDIR/bin
 mkdir -p $EMACSDIR/snippets
 
-sudo apt-get -y install emacs build-essential clang exuberant-ctags editorconfig libncurses5-dev
+sudo apt-get -y install emacs build-essential clang exuberant-ctags editorconfig libncurses5-dev surfraw
 
 npm install -g tern jshint
 
