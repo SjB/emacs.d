@@ -4,7 +4,10 @@
 (defalias 'pgrep 'helm-projectile-grep)
 (defalias 'pack  'helm-projectile-ack)
 (defalias 'dtw 'delete-trailing-whitespace)
-
+(defalias 'ddg 'engine/search-duckduckgoog)
+(defalias 'gh 'engine/search-github)
+(defalias 'goog 'helm-google-suggest)
+(defalias 'ws 'helm-surfraw)
 
 ;; SjB keybinding file
 (global-set-key (kbd "M-x") 'helm-M-x)
