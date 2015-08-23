@@ -1,39 +1,42 @@
 (ensure-package-installed
- ;'js2-mode
- 'js3-mode
+ 'js2-mode
+ 'json-mode
  'ac-js2
  'js2-refactor)
 
-(add-to-list 'auto-mode-alist '("\\.json\\'" . js3-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 
-(eval-after-load "js3-mode"
+(add-hook 'web-mode-hook '(lambda ()
+			    (require 'flycheck)
+			    (setq-default flycheck-disabled-checkers
+					  (append flycheck-disabled-checkers '(javascript-jshint)))
+
+			    (setq-default flycheck-disabled-checkers
+					  (append flycheck-disabled-checkers '(json-jsonlist)))
+
+			    (flycheck-add-mode 'javascript-eslint 'web-mode)
+
+			    (js2-minor-mode t)
+
+			    ))
+
+(add-hook 'js2-init-hook '(lambda ()
+			    (ac-js2-mode t)
+			    (js2-refactor-mode t)
+			    ))
+
+
+(eval-after-load "js2-mode"
   '(progn
-     (setq
-      js3-auto-indent-p t
-      js3-lazy-commas t
-      js3-lazy-operators t
-      js3-enter-indents-newline t
-      js3-indent-on-enter-key t
-      js3-lazy-dots t
-      js3-expr-indent-offset 2
-      js3-paren-indent-offset 2
-      js3-square-indent-offset 2
-      js3-curly-indent-offset 0)
+     (setq js2-highlight-level 3)
 
      (require 'js2-refactor)
-     (add-hook 'js3-mode-hook (lambda ()
-				(flycheck-mode t)
-				(ac-js2-mode t)
-				(js2-refactor-mode t))
-	       )))
+     (require 'ac-js2)
 
-;(eval-after-load 'auto-complete
-;  (add-to-list 'ac-modes 'js3-mode))
+     (setq ac-js2-evaluate-calls t)
+     (js2r-add-keybindings-with-prefix "C-c C-j")
 
-
-;(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-;(setq js2-highlight-level 3)
-;(js2r-add-keybindings-with-prefix "C-c C-j")
+     ))
 
 (provide 'init-js-mode)

@@ -2,6 +2,9 @@
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 
+(add-hook 'jsx-mode '(lambda ()
+		       (js2-minor-mode t)))
+
 (eval-after-load "jsx-mode"
   '(progn
      (setq

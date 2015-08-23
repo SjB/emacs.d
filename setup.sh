@@ -6,7 +6,7 @@ mkdir -p $EMACSDIR/snippets
 
 sudo apt-get -y install emacs build-essential clang exuberant-ctags editorconfig libncurses5-dev surfraw
 
-npm install -g tern jshint
+npm install -g tern jshint eslint babel-eslint eslint-plugin-react
 
 #wget https://raw.githubusercontent.com/dominikh/go-errcheck.el/master/go-errcheck.el -O $EMACSDIR/conf/go-errcheck.el
 #wget https://raw.githubusercontent.com/nsf/gocode/master/emacs/go-autocomplete.el -O $EMACSDIR/conf/go-autocomplete.el
