@@ -23,6 +23,14 @@
  'exec-path-from-shell
  'monokai-theme
  'ctags-update
+ 'ace-jump-mode
+ 'cmake-mode
+ 'php-mode
+ 'expand-region
+ 'iedit
+ 'evil-iedit-state
+ 'multiple-cursors
+ 'typescript-mode
  'editorconfig)
 
 (require 'exec-path-from-shell)

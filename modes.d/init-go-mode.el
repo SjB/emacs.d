@@ -5,32 +5,44 @@
  'go-errcheck
  'company-go)
 
-(require 'go-mode)
-(require 'go-mode-autoloads)
-(require 'compile)
-(require 'go-eldoc)
-(require 'go-oracle)
-(require 'go-errcheck)
+(eval-after-load "go-mode"
+  '(progn
+     (require 'go-mode-autoloads)
+     (require 'compile)
+     (require 'go-eldoc)
+     (require 'go-oracle)
+     (require 'go-errcheck)
 
-(require 'init-flycheck-mode)
-(require 'init-company-mode)
+     (require 'init-flycheck-mode)
+     (require 'init-company-mode)
 
-(add-hook 'go-mode-hook (lambda ()
-			  ; use company for auto-complete
-			  (add-to-list 'company-backends 'company-go)
-			  (setq company-backends (delete 'company-semantic company-backends))
 
-			  ; (set (make-local-variable 'company-backends) '(company-go))
-			  (go-eldoc-setup)
-			  ; Use goimports instead of go-fmt
-			  (setq gofmt-command "goimports")
+     (add-hook 'go-mode-hook (lambda ()
+			       (env-go)
+			       ;use company for auto-complete
+			       (add-to-list 'company-backends 'company-go)
+			       (setq company-backends (delete 'company-semantic company-backends))
 
-			  ; Call Gofmt before saving
-			  (add-hook 'before-save-hook 'gofmt-before-save)
+			       (set (make-local-variable 'company-backends) '(company-go))
+			       (go-eldoc-setup)
+			       ;Use goimports instead of go-fmt
+			       (setq gofmt-command "goimports")
 
-			  (company-mode)
-			  (flycheck-mode)
-			  ))
+			       ;Call Gofmt before saving
+			       (add-hook 'before-save-hook 'gofmt-before-save)
+
+			       (company-mode)
+			       (flycheck-mode)))
+
+     (eval-after-load "evil"
+       '(progn
+	  ;; golang mode keybinding
+	  (evil-define-key 'normal go-mode-map
+	    "gd" 'godef-jump
+	    "gr" 'go-remove-unused-imports
+	    "ga" 'go-import-add)))
+
+     (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)))
 
 (defun generic-go-env-settings (gopath &optional goroot)
   (if goroot
@@ -63,12 +75,12 @@
   (generic-go-env-settings (projectile-project-root))
 )
 
-(defun env-go-beta ()
+(defun env-go ()
   (interactive)
   (generic-go-env-settings (projectile-project-root) "/opt/go")
 )
 
-(defun env-go ()
+(defun env-go-beta ()
   (interactive)
   (generic-go-env-settings (projectile-project-root) "~/tools/local/go")
 )

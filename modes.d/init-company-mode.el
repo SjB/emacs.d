@@ -1,11 +1,6 @@
 (ensure-package-installed 'company)
 
 (require 'company)
-(require 'company-yasnippet)
-(require 'company-elisp)
-
-(add-to-list 'company-backends 'company-elisp)
-;(add-to-list 'company-backends 'company-yasnippet)
 
 (setq
  company-tooltip-limit 20

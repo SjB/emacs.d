@@ -4,9 +4,6 @@
  'ac-js2
  'js2-refactor)
 
-;(require 'js2-mode)
-(require 'js2-refactor)
-
 (add-to-list 'auto-mode-alist '("\\.json\\'" . js3-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
 
@@ -24,6 +21,7 @@
       js3-square-indent-offset 2
       js3-curly-indent-offset 0)
 
+     (require 'js2-refactor)
      (add-hook 'js3-mode-hook (lambda ()
 				(flycheck-mode t)
 				(ac-js2-mode t)
