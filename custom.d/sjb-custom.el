@@ -16,14 +16,14 @@
 
 (pending-delete-mode t)
 
-(setq global-auto-revert-non-file-buffers t)
-(setq auto-revert-verbose nil)
 
 (setq inhibit-startup-screen t
       inhibit-splash-screen t
       inhibit-startup-echo-area-message t
       inhibit-startup-message t
       require-final-newline t
+      global-auto-revert-non-file-buffers t
+      auto-revert-verbose nil
       make-backup-files nil ; stop creating those backup~ files
       auto-save-default nil ; stop creating those #autosave# files
       dabrev-case-fold-search t
