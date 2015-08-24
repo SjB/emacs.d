@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Reference
+# key: Reference
+# --
+<Reference Include="${1}" />
+${0}

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Compile
+# key: Compile
+# --
+<Compile Include="${1}" />
+${0}

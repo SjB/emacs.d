@@ -1,0 +1,20 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: definition
+# key: definition
+# --
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="${1:ProjectName}" Path="${2:Path}" Type="${3:App}">
+  <Properties>
+    <RootNamespace>${4:RootNamespace}</RootNamespace>
+    <FrameworkVersions>
+      <Version>v4.5</Version>
+    </FrameworkVersions>
+    <NoWarn>1591</NoWarn>
+  </Properties>
+  <References>
+	${5}
+  </References>
+  <Files>
+	${6}
+  </Files>
+</Project>
