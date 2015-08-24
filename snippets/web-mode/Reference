@@ -2,5 +2,4 @@
 # name: Reference
 # key: Reference
 # --
-<Reference Include="${1}" />
-${0}
+<Reference Include="$1" />$0

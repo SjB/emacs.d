@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Binary
+# key: Binary
+# --
+<Binary
+	Name="${1:Name}"
+	Path="${2:Path}" />$0

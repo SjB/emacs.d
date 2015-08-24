@@ -2,5 +2,4 @@
 # name: Compile
 # key: Compile
 # --
-<Compile Include="${1}" />
-${0}
+<Compile Include="$1" />$0

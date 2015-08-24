@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Property
+# key: Property
+# --
+<Property Name="${1:Name}" value="$2" />$0

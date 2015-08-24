@@ -1,9 +1,8 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: definition
 # key: definition
+# name: definition
 # --
 <?xml version="1.0" encoding="utf-8"?>
-<Project Name="${1:ProjectName}" Path="${2:Path}" Type="${3:App}">
+<Project Name="${1:ProjectName}" Path="${2:Path}" Type="${3:$$(yas-choose-value '("App" "Console" "Library"))}">
   <Properties>
     <RootNamespace>${4:RootNamespace}</RootNamespace>
     <FrameworkVersions>
@@ -12,9 +11,9 @@
     <NoWarn>1591</NoWarn>
   </Properties>
   <References>
-	${5}
+	$5
   </References>
   <Files>
-	${6}
+	$6
   </Files>
 </Project>

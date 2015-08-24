@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: CSProj
+# key: CSProj
+# --
+<Project
+	Name="${1:Name}"
+	Guid="${2:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}"
+	Path="${3:Path}" />$0

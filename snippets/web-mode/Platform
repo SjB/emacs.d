@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Platform
+# key: Platform
+# --
+<Platform Type="${1:$$(yas-choose-value '("Windows" "Linux" "MacOS" "iOS" "Android"))}">
+$0
+</Platfom>
